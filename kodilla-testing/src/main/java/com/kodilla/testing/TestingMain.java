@@ -12,17 +12,16 @@ public class TestingMain {
 
         if (resultAdd == 10 + 15) {
             System.out.println("Test OK!");
-        }else{
+        } else {
             System.out.println("Error!");
         }
 
-        int resultSubstract = calculator.substract(10,15);
+        int resultSubstract = calculator.substract(10, 15);
 
-        if (resultSubstract == 10 + 14 ) {
+        if (resultSubstract == 10 + 14) {
             System.out.println("Test Ok!");
-        }else{
+        } else {
             System.out.println("Error!");
         }
     }
 }
-

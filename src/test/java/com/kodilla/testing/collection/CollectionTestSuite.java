@@ -12,8 +12,8 @@ public class CollectionTestSuite {
     private void after(){
         System.out.println(Test end);
     }
-    @BeforeClass
 
+    @BeforeClass
     public static void beforeClass(){
         System.out.println("Test Begin");
     }

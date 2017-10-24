@@ -26,12 +26,4 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorEmptyList(){}
     public void testOddNumbersExterminatorNormalList(){}
-
-
-
-
-
-
-
-
 }

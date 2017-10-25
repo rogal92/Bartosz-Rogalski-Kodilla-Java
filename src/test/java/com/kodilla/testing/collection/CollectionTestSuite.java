@@ -3,14 +3,16 @@ package com.kodilla.testing.collection;
 import org.junit.*;
 import com.kodilla.testing.collection.OddNumbersExterminator;
 
-public class CollectionTestSuite {
+import java.util.ArrayList;
+
+class CollectionTestSuite {
     @Before
     private void before(){
         System.out.println("Test begin");
     }
     @After
     private void after(){
-        System.out.println(Test end);
+        System.out.println("Test end");
     }
 
     @BeforeClass
@@ -23,7 +25,25 @@ public class CollectionTestSuite {
         System.out.println("Test end");
     }
 
+
     @Test
-    public void testOddNumbersExterminatorEmptyList(){}
-    public void testOddNumbersExterminatorNormalList(){}
+    public void testOddNumbersExterminatorEmptyList(){
+        OddNumbersExterminator oddNE = new OddNumbersExterminator();
+
+        boolean resultOne = oddNE(exterminate());
+
+
+        Assert.assertEquals();
+
+    }
+
+    @Test
+    public void testOddNumbersExterminatorNormalList(){
+
+        OddNumbersExterminator oddNETwo = new OddNumbersExterminator();
+
+        Integer resultTwo = oddNETwo.();
+
+        Assert.assertEquals();
+    }
 }

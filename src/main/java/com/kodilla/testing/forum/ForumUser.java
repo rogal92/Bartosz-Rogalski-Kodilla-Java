@@ -24,8 +24,12 @@ public class ForumUser {
     public int getPostsQuantity(){
         return 100;
     }
-    public int getCommentQuantity(){
+    public int getCommentsQuantity(){
         return 100;
+    }
+
+    public ForumPost getPost(int postNumber){
+        return null;
     }
 
     public ForumComment getComment(int commentNumber){

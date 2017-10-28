@@ -1,9 +1,6 @@
 package com.kodilla.testing.collection;
 
 import org.junit.*;
-import com.kodilla.testing.collection.OddNumbersExterminator;
-
-import java.util.ArrayList;
 
 class CollectionTestSuite {
     @Before
@@ -30,10 +27,10 @@ class CollectionTestSuite {
     public void testOddNumbersExterminatorEmptyList(){
         OddNumbersExterminator oddNE = new OddNumbersExterminator();
 
-        boolean resultOne = oddNE(exterminate());
 
 
-        Assert.assertEquals();
+
+
 
     }
 
@@ -42,8 +39,8 @@ class CollectionTestSuite {
 
         OddNumbersExterminator oddNETwo = new OddNumbersExterminator();
 
-        Integer resultTwo = oddNETwo.();
 
-        Assert.assertEquals();
+
     }
 }
+

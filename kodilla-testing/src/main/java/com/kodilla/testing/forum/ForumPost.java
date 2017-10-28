@@ -35,3 +35,4 @@ public class ForumPost {
         return result;
     }
 }
+

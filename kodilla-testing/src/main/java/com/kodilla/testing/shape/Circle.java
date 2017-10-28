@@ -1,6 +1,6 @@
 package com.kodilla.testing.shape;
 
-abstract class Circle implements Shape{
+public class Circle implements Shape{
 
 
     String circleName;
@@ -11,21 +11,21 @@ abstract class Circle implements Shape{
         this.circleField = field;
     }
 
-    public String getCircleName() {
-        return circleName;
-    }
-
-    public Integer getCircleField() {
-        return circleField;
-    }
-
-    //    public void getShapeName(){
-//        System.out.println(circleName);
+//    public String getCircleName() {
+//        return circleName;
 //    }
 //
-//    public void getField(){
-//        System.out.println(circleField);
+//    public Integer getCircleField() {
+//        return circleField;
 //    }
+
+        public void getShapeName(){
+        System.out.println(circleName);
+    }
+
+    public void getField(){
+        System.out.println(circleField);
+    }
 
 
     @Override

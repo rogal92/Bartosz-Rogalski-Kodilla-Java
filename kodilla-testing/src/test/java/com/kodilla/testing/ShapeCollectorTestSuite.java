@@ -30,7 +30,7 @@ public class ShapeCollectorTestSuite {
 
         circleName.getShapeName();
 
-        Assert.assertEquals(, circleName.getShapeName());
+        Assert.assertEquals("Circle", circleName.getShapeName());
     }
     @Test
     public void testCircleField() {
@@ -38,7 +38,7 @@ public class ShapeCollectorTestSuite {
 
         circleField.getField();
 
-        Assert.assertEquals(, circleField.getField());
+        Assert.assertEquals(40, circleField.getField());
     }
     @Test
     public void testTriangleName() {
@@ -54,7 +54,7 @@ public class ShapeCollectorTestSuite {
 
         triangleField.getField();
 
-        Assert.assertEquals("Triangle", triangleField.getField());
+        Assert.assertEquals( triangleField.getField());
     }
     @Test
     public void testSquareName() {
@@ -70,6 +70,6 @@ public class ShapeCollectorTestSuite {
 
         squareField.getField();
 
-        Assert.assertEquals(null, squareField.getField();
+        Assert.assertEquals(25, squareField.getField();
     }
 }

@@ -1,6 +1,6 @@
 package com.kodilla.testing.shape;
 
-abstract class Triangle implements Shape {
+public class Triangle implements Shape {
 
     String triangleName;
     Integer triangleField;
@@ -10,21 +10,21 @@ abstract class Triangle implements Shape {
         this.triangleField = triangleField;
     }
 
-    public String getTriangleName() {
-        return triangleName;
-    }
-
-    public Integer getTriangleField() {
-        return triangleField;
-    }
-
-    //    public void getShapeName() {
-//        System.out.println(triangleName);
+//    public String getTriangleName() {
+//        return triangleName;
 //    }
 //
-//    public void getField() {
-//        System.out.println(triangleField);
+//    public Integer getTriangleField() {
+//        return triangleField;
 //    }
+
+        public void getShapeName() {
+        System.out.println(triangleName);
+    }
+
+    public void getField() {
+        System.out.println(triangleField);
+    }
 
     @Override
     public boolean equals(Object o) {

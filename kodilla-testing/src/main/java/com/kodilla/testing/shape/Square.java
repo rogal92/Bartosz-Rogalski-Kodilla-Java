@@ -1,6 +1,6 @@
 package com.kodilla.testing.shape;
 
-abstract class Square implements Shape {
+public class Square implements Shape {
 
     String squareName;
     Integer squareField;
@@ -10,21 +10,21 @@ abstract class Square implements Shape {
         this.squareField = squareField;
     }
 
-    public String getSquareName() {
-        return squareName;
-    }
-
-    public Integer getSquareField() {
-        return squareField;
-    }
-
-    //    public void getShapeName() {
-//        System.out.println(squareName);
+//    public String getSquareName() {
+//        return squareName;
 //    }
 //
-//    public Integer getField() {
-//        System.out.println(squareField);
+//    public Integer getSquareField() {
+//        return squareField;
 //    }
+
+        public void getShapeName() {
+        System.out.println(squareName);
+    }
+
+    public void getField() {
+        System.out.println(squareField);
+    }
 
 }
 

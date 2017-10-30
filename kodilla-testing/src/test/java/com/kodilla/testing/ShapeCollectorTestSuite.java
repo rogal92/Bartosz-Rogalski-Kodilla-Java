@@ -4,6 +4,7 @@ import com.kodilla.testing.shape.Circle;
 import com.kodilla.testing.shape.Triangle;
 import com.kodilla.testing.shape.Square;
 import org.junit.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class ShapeCollectorTestSuite {
     private static int testCounter = 0;
@@ -26,19 +27,19 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testCircleName() {
-        Circle circleName = new Circle("Circle", 40);
+        Circle circleName = new Circle( new Double(2.0));
 
         circleName.getShapeName();
 
-        Assert.assertEquals("Circle", circleName.getShapeName());
+        Assert.assertEquals(, circleName.getShapeName());
     }
     @Test
     public void testCircleField() {
-        Circle circleField = new Circle("Circle", 40);
+        Circle circleField = new Circle( new Double(2.0));
 
         circleField.getField();
 
-        Assert.assertEquals(40, circleField.getField());
+        Assert.assertEquals(new Double(40.0), circleField.getField());
     }
     @Test
     public void testTriangleName() {

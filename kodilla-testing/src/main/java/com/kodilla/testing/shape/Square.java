@@ -2,31 +2,21 @@ package com.kodilla.testing.shape;
 
 public class Square implements Shape {
 
-    String squareName;
-    Integer squareField;
 
-    public Square(String squareName, Integer squareField) {
-        this.squareName = squareName;
-        this.squareField = squareField;
+    Double squareSide;
+
+    public Square(Double squareSide) {
+        this.squareSide = squareSide;
     }
 
-//    public String getSquareName() {
-//        return squareName;
-//    }
-//
-//    public Integer getSquareField() {
-//        return squareField;
-//    }
-
-        public void getShapeName() {
-        System.out.println(squareName);
+    public String getShapeName() {
+        return "Square";
     }
 
-    public void getField() {
-        System.out.println(squareField);
-    }
+    public Double getField() {
 
-}
+        return squareSide*squareSide;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -35,14 +25,11 @@ public class Square implements Shape {
 
         Square square = (Square) o;
 
-        if (!squareName.equals(square.squareName)) return false;
-        return squareField.equals(square.squareField);
+        return squareSide.equals(square.squareSide);
     }
 
     @Override
     public int hashCode() {
-        int result = squareName.hashCode();
-        result = 31 * result + squareField.hashCode();
-        return result;
+        return squareSide.hashCode();
     }
 }

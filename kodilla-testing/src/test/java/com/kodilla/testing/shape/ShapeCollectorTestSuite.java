@@ -1,4 +1,4 @@
-package com.kodilla.testing;
+package com.kodilla.testing.shape;
 
 import com.kodilla.testing.shape.Circle;
 import com.kodilla.testing.shape.Triangle;
@@ -31,7 +31,7 @@ public class ShapeCollectorTestSuite {
 
         circleName.getShapeName();
 
-        Assert.assertEquals(, circleName.getShapeName());
+        Assert.assertEquals("Circle", circleName.getShapeName());
     }
     @Test
     public void testCircleField() {
@@ -43,34 +43,43 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testTriangleName() {
-        Triangle triangleName = new Triangle("Triangle", 30);
+        Triangle triangleName = new Triangle(5.0,6.0);
 
         triangleName.getShapeName();
 
-        Assert.assertEquals(null, triangleName.getShapeName();
+        Assert.assertEquals("Triangle", triangleName.getShapeName());
     }
     @Test
     public void testTriangleField() {
-        Triangle triangleField = new Triangle("Triangle", 30);
+        Triangle triangleField = new Triangle(5.0,6.0);
 
         triangleField.getField();
 
-        Assert.assertEquals( triangleField.getField());
+        Assert.assertEquals(new Triangle(5.0, 6.0) , triangleField.getField());
     }
     @Test
     public void testSquareName() {
-        Square squareName = new Square("Square",25);
+        Square squareName = new Square(5.0);
 
         squareName.getShapeName();
 
-        Assert.assertEquals("Square", squareName.getShapeName();
+        Assert.assertEquals("Square", squareName.getShapeName());
     }
     @Test
     public void testSquareField() {
-        Square squareField = new Square("Square", 25);
+        Square squareField = new Square(5.0);
 
         squareField.getField();
 
-        Assert.assertEquals(25, squareField.getField();
+        Assert.assertEquals(new Square(5.0), squareField.getField());
+    }
+    @Test
+    public void testAddFigure(){
+//        Given
+        ShapeCollector shapeCollector = new ShapeCollector();
+//        When
+        shapeCollector.addFigure();
+//        Then
+        Assert.assertEquals(1, shapeCollector.getFigure(1));
     }
 }

@@ -6,8 +6,8 @@ public class Circle implements Shape{
 
     Double circleField;
 
-    public Circle(Double circleField) {
-        this.circleField = circleField;
+    public Circle(Double circleRadius) {
+        this.circleField = circleRadius;
     }
 
     public String getShapeName(){

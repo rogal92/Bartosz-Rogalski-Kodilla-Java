@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 class CollectionTestSuite {
+
     @Before
     private void before(){
         System.out.println("Test begin");

@@ -75,10 +75,11 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testAddFigure(){
+        Circle circle = new Circle(2.0);
 //        Given
         ShapeCollector shapeCollector = new ShapeCollector();
 //        When
-        shapeCollector.addFigure();
+        shapeCollector.addFigure(circle);
 //        Then
         Assert.assertEquals(1, shapeCollector.getFigure(1));
     }

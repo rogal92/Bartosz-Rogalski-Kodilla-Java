@@ -30,7 +30,7 @@ public class ShapeCollector {
         }
     }
     public Integer showFigures(Circle circle, Square square, Triangle triangle){
-        return 100;
+
     }
 }
 

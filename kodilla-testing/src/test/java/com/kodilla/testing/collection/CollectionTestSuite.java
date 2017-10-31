@@ -8,9 +8,14 @@ import java.util.List;
 
 class CollectionTestSuite {
 
+    OddNumbersExterminator oddNumbersExterminator;
+
+
+
     @Before
     private void before(){
         System.out.println("Test begin");
+        oddNumbersExterminator = new OddNumbersExterminator();
     }
     @After
     private void after(){
@@ -30,12 +35,11 @@ class CollectionTestSuite {
 
     @Test
     public void testEvenValuesSize(){
-        OddNumbersExterminator oddNE = new OddNumbersExterminator();
         //Given
         ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(2,33,44,123,45,42,33));
 
         //when
-        ArrayList<Integer> even = (oddNE.exterminate(list));
+        ArrayList<Integer> even = oddNumbersExterminator.exterminate(list);
 
         //then
         Assert.assertEquals(3, even.size());
@@ -43,26 +47,22 @@ class CollectionTestSuite {
 
     @Test
     public void testOddNumbersExterminatorEmptyList(){
-
-        OddNumbersExterminator oddNETwo = new OddNumbersExterminator();
 //        Given
         ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList());
 
 //        When
-        ArrayList<Integer> empty = (oddNETwo.exterminate(list));
+        ArrayList<Integer> empty = oddNumbersExterminator.exterminate(list);
 //        Then
         Assert.assertEquals(empty.isEmpty(), empty);
     }
 
     @Test
     public void testOddNumbersExterminatorNormalList(){
-
-        OddNumbersExterminator oddNEThree = new OddNumbersExterminator();
 //        Given
         ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(2,33,44,123,45,42,33));
 
 //        When
-        ArrayList<Integer> normal = (oddNEThree.exterminate(list));
+        ArrayList<Integer> normal = oddNumbersExterminator.exterminate(list);
 //        Then
         Assert.assertEquals(normal.containsAll(list),list);
     }

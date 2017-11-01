@@ -1,10 +1,6 @@
 package com.kodilla.testing.shape;
 
-import com.kodilla.testing.shape.Circle;
-import com.kodilla.testing.shape.Triangle;
-import com.kodilla.testing.shape.Square;
 import org.junit.*;
-import static org.junit.Assert.assertArrayEquals;
 
 public class ShapeCollectorTestSuite {
     private static int testCounter = 0;
@@ -39,7 +35,7 @@ public class ShapeCollectorTestSuite {
 
         circleField.getField();
 
-        Assert.assertEquals(new Double(40.0), circleField.getField());
+        Assert.assertEquals(new Double(12.566370614359172), circleField.getField());
     }
     @Test
     public void testTriangleName() {
@@ -55,7 +51,7 @@ public class ShapeCollectorTestSuite {
 
         triangleField.getField();
 
-        Assert.assertEquals(new Triangle(5.0, 6.0) , triangleField.getField());
+        Assert.assertEquals(new Double(15) , triangleField.getField());
     }
     @Test
     public void testSquareName() {
@@ -71,7 +67,7 @@ public class ShapeCollectorTestSuite {
 
         squareField.getField();
 
-        Assert.assertEquals(new Square(5.0), squareField.getField());
+        Assert.assertEquals(new Double(25), squareField.getField());
     }
     @Test
     public void testAddFigure(){
@@ -85,13 +81,14 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testRemoveFigure(){
-        Circle circle = new Circle(2.0);
 //        Given
+        Circle circle = new Circle(2.0);
         ShapeCollector shapeCollector = new ShapeCollector();
+        shapeCollector.addFigure(circle);
 //        When
-        shapeCollector.removeFigure(circle);
+        boolean deleted = shapeCollector.removeFigure(circle);
 //        Then
-        Assert.assertEquals(null, shapeCollector.removeFigure(circle));
+        Assert.assertTrue(deleted);
     }
     @Test
     public void testShowFigure(){
@@ -99,8 +96,8 @@ public class ShapeCollectorTestSuite {
 //        Given
         ShapeCollector shapeCollector = new ShapeCollector();
 //        When
-        shapeCollector.removeFigure(circle);
+        shapeCollector.showFigures();
 //        Then
-        Assert.assertEquals(, shapeCollector.showFigures(allFigures));
+        Assert.assertEquals("Circle Square Triangle", shapeCollector.showFigures());
     }
 }

@@ -22,7 +22,7 @@ public class ShapeCollector {
 
     public Shape getFigure(int figureNumber) {
         Shape theFigure = null;
-        if (figureNumber >= 0 && figureNumber < figures.size()) ;
+        if (figureNumber >= 0 && figureNumber < figures.size())
         {
             theFigure = figures.get(figureNumber);
         }
@@ -31,9 +31,9 @@ public class ShapeCollector {
 
     public String showFigures() {
 
-        StringBuilder sFigures = new StringBuilder().append("Circle ").append("Square ").append("Triangle");
+        StringBuilder sFigures = new StringBuilder();
         for (Shape shape: figures) {
-            System.out.println(sFigures);
+            System.out.println(sFigures.append(shape));
         }
         return sFigures.toString();
     }

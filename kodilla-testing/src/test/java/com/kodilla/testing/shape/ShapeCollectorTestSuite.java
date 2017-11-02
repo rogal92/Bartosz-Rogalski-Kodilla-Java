@@ -91,6 +91,17 @@ public class ShapeCollectorTestSuite {
         Assert.assertTrue(deleted);
     }
     @Test
+    public void testGetFigure(){
+//        Given
+        Circle circle = new Circle(2.0);
+        ShapeCollector shapeCollector = new ShapeCollector();
+        shapeCollector.getFigure(1);
+//        When
+        shapeCollector.getFigure(1);
+//        Then
+        Assert.assertEquals(null, shapeCollector.getFigure(1));
+    }
+    @Test
     public void testShowFigure(){
 
 //        Given
@@ -98,6 +109,6 @@ public class ShapeCollectorTestSuite {
 //        When
         shapeCollector.showFigures();
 //        Then
-        Assert.assertEquals("Circle Square Triangle", shapeCollector.showFigures());
+        Assert.assertEquals( "", shapeCollector.showFigures());
     }
 }

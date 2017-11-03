@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifer.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -27,5 +28,8 @@ public class StramMain {
         poemBeautifier.beautify("NOW OTHERWISE, ", "ALSO WITH LAMBDA EXPRESSION", (a, b) -> a.toLowerCase()+ b.toLowerCase());
         poemBeautifier.beautify("Itself returned ", "with lambda expression", (a, b) -> a.toString()+b.toString());
         poemBeautifier.beautify("Word added is : ", "   Using intern method", (a, b) -> a.concat("Hello")+ b.intern());
+
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
     }
 }

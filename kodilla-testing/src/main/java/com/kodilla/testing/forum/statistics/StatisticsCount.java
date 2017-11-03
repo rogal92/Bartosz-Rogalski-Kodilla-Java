@@ -10,9 +10,11 @@ public class StatisticsCount {
         this.statistics = statistics;
     }
 
-    public List<String> countUsers(){
-
-        return null;
+    public List<Integer> countUsers(){
+        for (int i = 0; i < ; i++) {
+            
+        }
     }
 
+    public List<Integer>
 }

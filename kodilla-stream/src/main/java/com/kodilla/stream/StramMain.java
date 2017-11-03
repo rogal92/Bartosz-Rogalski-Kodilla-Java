@@ -23,11 +23,11 @@ public class StramMain {
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
 
         System.out.println("Beutifier");
-        poemBeautifier.beautify("Find first 3 letters sequence...", "Success", (a, b) -> "ABC"+a+"ABC" + b + "ABC");
-        poemBeautifier.beautify("converted to uppercase ", "with lambda expression", (a, b) -> a.toUpperCase() + b.toUpperCase());
-        poemBeautifier.beautify("NOW OTHERWISE, ", "ALSO WITH LAMBDA EXPRESSION", (a, b) -> a.toLowerCase()+ b.toLowerCase());
-        poemBeautifier.beautify("Itself returned ", "with lambda expression", (a, b) -> a.toString()+b.toString());
-        poemBeautifier.beautify("Word added is : ", "   Using intern method", (a, b) -> a.concat("Hello")+ b.intern());
+        poemBeautifier.beautify("Find first 3 letters sequence...",(a) -> "ABC"+a+"ABC");
+        poemBeautifier.beautify("converted to uppercase ",  (a) -> a.toUpperCase());
+        poemBeautifier.beautify("NOW OTHERWISE, ", (a) -> a.toLowerCase());
+        poemBeautifier.beautify("Itself returned ", (a) -> a.toString());
+        poemBeautifier.beautify("Word added is : ", (a) -> a.concat("Hello"));
 
         System.out.println("Using Stream to generate even numbers from 1 to 20");
         NumbersGenerator.generateEven(20);

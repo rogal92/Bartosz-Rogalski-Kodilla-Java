@@ -11,10 +11,15 @@ public class StatisticsCount {
     }
 
     public List<Integer> countUsers(){
-        for (int i = 0; i < ; i++) {
-            
-        }
-    }
+    return null;
 
-    public List<Integer>
+    }
 }
+
+//        for (int i = 0; i < ; i++) {
+//
+//        }
+//    }
+//
+//    public List<Integer>
+//}

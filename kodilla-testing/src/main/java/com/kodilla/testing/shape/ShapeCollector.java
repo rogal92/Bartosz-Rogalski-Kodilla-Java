@@ -9,18 +9,15 @@ public class ShapeCollector {
     public Shape addFigure(Shape shape) {
 
         figures.add(shape);
-        return shape;
+        return null;
     }
 
     public boolean removeFigure(Shape shape) {
-        boolean result = false;
-        if (figures.remove(shape)) {
-            result = true;
-        }
-        return result;
+        return figures.remove(shape);
     }
 
     public Shape getFigure(int figureNumber) {
+
         return figures.get(figureNumber);
     }
 

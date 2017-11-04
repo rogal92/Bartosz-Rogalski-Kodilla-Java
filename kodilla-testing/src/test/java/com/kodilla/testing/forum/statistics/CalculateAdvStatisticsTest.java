@@ -9,6 +9,5 @@ public class CalculateAdvStatisticsTest {
     public void testAverageOne(){
         //Given
         Statistics statisticsMock = mock(Statistics.class);
-
     }
 }

@@ -2,46 +2,46 @@ package com.kodilla.testing.forum.statistics;
 
 public class StatisticsCount {
 
-    public int userQ;
-    public int postsQ;
-    public int commentQ;
-    public double averageO;
-    public double averageT;
-    public double averageTh;
+    public int userQuantity;
+    public int postsQuantity;
+    public int commentQuantity;
+    public double averageOne;
+    public double averageTwo;
+    public double averageThree;
 
-    public int getUserQ() {
-        return userQ;
+    public int getUserQuantity() {
+        return userQuantity;
     }
 
-    public int getPostsQ() {
-        return postsQ;
+    public int getPostsQuantity() {
+        return postsQuantity;
     }
 
-    public int getCommentQ() {
-        return commentQ;
+    public int getCommentQuantity() {
+        return commentQuantity;
     }
 
-    public double getAverageO() {
-        return averageO;
+    public double getAverageOne() {
+        return averageOne;
     }
 
-    public double getAverageT() {
-        return averageT;
+    public double getAverageTwo() {
+        return averageTwo;
     }
 
-    public double getAverageTh() {
-        return averageTh;
+    public double getAverageThree() {
+        return averageThree;
     }
 
     public double calculateAdvStatistics(Statistics statistics) {
 
-        userQ = statistics.userNames().size();
-        postsQ = statistics.postsCount();
-        commentQ = statistics.commentsCount();
+        userQuantity = statistics.userNames().size();
+        postsQuantity = statistics.postsCount();
+        commentQuantity = statistics.commentsCount();
 
-        averageO = postsQ/userQ;
-        averageT = commentQ/userQ;
-        averageTh = commentQ/postsQ;
-        return averageO + averageT + averageTh;
+        averageOne = postsQuantity / userQuantity;
+        averageTwo = commentQuantity / userQuantity;
+        averageThree = commentQuantity / postsQuantity;
+        return averageOne + averageTwo + averageThree;
     }
 }

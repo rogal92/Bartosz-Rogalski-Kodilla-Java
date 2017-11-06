@@ -1,4 +1,13 @@
 package com.kodilla.stream.world;
 
-public class Continent {
+import java.util.ArrayList;
+import java.util.List;
+
+public final class Continent {
+    private final List<Country> listOfCountries = new ArrayList<>();
+
+    public void addCountry(Country country){
+        listOfCountries.add(country);
+    }
+
 }

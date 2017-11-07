@@ -38,9 +38,20 @@ public class StatisticsCount {
         userQuantity = statistics.userNames().size();
         postsQuantity = statistics.postsCount();
         commentQuantity = statistics.commentsCount();
-
-        averagePostsPerUser = postsQuantity / userQuantity;
-        averageCommetsPerUser = commentQuantity / userQuantity;
-        averageCommentsPerPost = commentQuantity / postsQuantity;
+        if (userQuantity != 0) {
+            averagePostsPerUser = postsQuantity / userQuantity;
+        } else {
+            averageCommentsPerPost = 0;
+        }
+        if (userQuantity != 0) {
+            averageCommetsPerUser = commentQuantity / userQuantity;
+        }else{
+            averageCommetsPerUser = 0;
+        }
+        if (commentQuantity != 0 && postsQuantity != 0){
+            averageCommentsPerPost = commentQuantity / postsQuantity;
+        }else{
+            averageCommentsPerPost = 0;
+        }
     }
 }

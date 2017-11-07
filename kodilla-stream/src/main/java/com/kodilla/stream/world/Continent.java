@@ -4,10 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Continent {
-    private final List<Country> listOfCountries = new ArrayList<>();
+    private final String continentName;
+    private final List<Country> countries = new ArrayList<>();
 
-    public void addCountry(Country country){
-        listOfCountries.add(country);
+    public Continent(String continentName) {
+        this.continentName = continentName;
     }
 
+
+    public void addCountry(Country country){
+
+        countries.add(country);
+    }
+
+    public List<Country> getCountries() {
+        return countries;
+    }
 }

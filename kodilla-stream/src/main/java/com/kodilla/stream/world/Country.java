@@ -9,6 +9,9 @@ public final class Country {
         this.countryName = countryName;
     }
 
+    public Country() {
+    }
+
     public String getCountryName() {
         return countryName;
     }

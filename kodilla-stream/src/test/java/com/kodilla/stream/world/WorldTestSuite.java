@@ -8,7 +8,7 @@ public class WorldTestSuite {
         //Given
         World world = new World();
         //When
-        world.addContinent(new Continent(new Country()));
+        world.addContinent(new Continent(new Country("Poland")));
         //Then
     }
 }

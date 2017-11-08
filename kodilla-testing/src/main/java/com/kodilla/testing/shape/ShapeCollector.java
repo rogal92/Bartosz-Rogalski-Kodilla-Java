@@ -25,7 +25,7 @@ public class ShapeCollector {
 
         StringBuilder sFigures = new StringBuilder();
         for (Shape shape: figures) {
-            System.out.println(sFigures.append(shape));
+            System.out.println(sFigures.append(figures));
         }
         return sFigures.toString();
     }

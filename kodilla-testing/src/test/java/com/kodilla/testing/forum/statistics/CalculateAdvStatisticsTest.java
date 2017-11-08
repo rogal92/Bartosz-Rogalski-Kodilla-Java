@@ -94,7 +94,7 @@ public class CalculateAdvStatisticsTest {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.commentsCount()).thenReturn(3);
-        when(statisticsMock.userNames()).thenReturn(new ArrayList<>(100));
+        when(statisticsMock.userNames()).thenReturn(new ArrayList<>(0));
         //When
         StatisticsCount statisticsCount = new StatisticsCount();
         statisticsCount.calculateAdvStatistics(statisticsMock);

@@ -7,8 +7,10 @@ public class WorldTestSuite {
     public void testGetPeopleQuantity() {
         //Given
         World world = new World();
+        world.addContinent(new Continent("Europe", ));
         //When
-        world.addContinent(new Continent(new Country("Poland")));
+
+
         //Then
     }
 }

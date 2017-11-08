@@ -9,15 +9,13 @@ public final class Country {
         this.countryName = countryName;
     }
 
-    public Country() {
-    }
-
     public String getCountryName() {
         return countryName;
     }
 
-    public BigDecimal getPeopleQuantity(){
-        BigDecimal peopleAmount = new BigDecimal("2323232");
-        return peopleAmount;
+    public BigDecimal peopleQuantity(){
+
+        BigDecimal getPeopleQuantity;
+        return getPeopleQuantity;
     }
 }

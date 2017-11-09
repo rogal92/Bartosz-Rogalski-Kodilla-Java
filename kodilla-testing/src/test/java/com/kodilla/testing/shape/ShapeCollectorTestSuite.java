@@ -119,6 +119,6 @@ public class ShapeCollectorTestSuite {
 //        When
         String show = shapeCollector.showFigures();
 //        Then
-        Assert.assertEquals( "Circle","Circle", show);
+        Assert.assertEquals("Circle Circle ", shapeCollector.showFigures());
     }
 }

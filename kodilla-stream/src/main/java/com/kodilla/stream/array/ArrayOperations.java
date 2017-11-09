@@ -1,24 +1,25 @@
-//package com.kodilla.stream.array;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.stream.IntStream;
-//import java.util.stream.Collectors;
-//
-//public interface ArrayOperations {
-//    static void getAverage(int[] numbers){
-//        List<Integer> numbersList = new ArrayList<>();
-//
-//        IntStream.range(0, numbersList.size());
-//        //tu powinna być jakaś komenda do wyświetlenia listy?
-//
-//        //Random random = new Random();
-//        //random.ints().limit(20).forEach(System.out::println);
-//
-//        // przeczytałem gdzieś że też można by było zrobić tak, efekt by był podobny?
-//        // wiem, że to nie zgodne z treścią zadania ale tak z ciekawości
-//        IntStream.range(0, numbersList.size())
-//        double a = numbersList.collect(Collectors.averagingDouble(n -> Double.parseDouble(n)));
-//        System.out.println(a);
-//    }
-//}
+package com.kodilla.stream.array;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Collectors;
+
+public interface ArrayOperations {
+    static void getAverage(int[] number){
+
+        number = new int[20];
+        Random randomNumber = new Random();
+        for (int i = 0; i <= 20 ; i++) {
+            number[i] = randomNumber.nextInt();
+
+            IntStream.range(0, number.length);
+            System.out.println(number[i]);
+        }
+        IntStream.range(0, number.length);
+        double a = Arrays.stream(number).collect(Collectors.averagingDouble(n -> Double.parseDouble(n)));
+        System.out.println(a);
+    }
+}

@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -95,11 +94,11 @@ public class CalculateAdvStatisticsTest {
         Statistics statisticsMock = mock(Statistics.class);
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.commentsCount()).thenReturn(3);
-        ArrayList<Integer> uNumber = new ArrayList<>();
-        for (int i = 0; i <= 100 ; i++) {
-            uNumber.add(i);
-        }
-        when(statisticsMock.userNames()).thenReturn(uNumber);
+//        ArrayList<Integer> uNumber = new ArrayList<>();
+//        for (int i = 0; i <= 100 ; i++) {
+//            uNumber.add(i);
+//        }
+        when(statisticsMock.userNames()).thenReturn(new ArrayList<>());
         //When
         StatisticsCount statisticsCount = new StatisticsCount();
         statisticsCount.calculateAdvStatistics(statisticsMock);

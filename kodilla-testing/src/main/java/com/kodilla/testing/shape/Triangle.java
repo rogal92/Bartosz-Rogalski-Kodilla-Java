@@ -18,4 +18,12 @@ public class Triangle implements Shape {
     public Double getField() {
             return (triangleH*triangleS)/2;
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "triangleH=" + triangleH +
+                ", triangleS=" + triangleS +
+                '}';
     }
+}

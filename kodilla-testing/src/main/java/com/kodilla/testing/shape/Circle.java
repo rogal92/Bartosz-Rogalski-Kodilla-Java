@@ -18,6 +18,12 @@ public class Circle implements Shape{
 
         return Math.PI*circleField*circleField;
     }
+
+    @Override
+    public String toString() {
+        return "Circle";
+
+    }
 }
 
 

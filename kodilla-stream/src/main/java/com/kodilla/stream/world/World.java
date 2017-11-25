@@ -14,7 +14,6 @@ public final class World {
     public List<Continent> getContinents() {
         return continents;
     }
-}
 
     public BigDecimal getPeopleQuantity(){
         return continents.stream()

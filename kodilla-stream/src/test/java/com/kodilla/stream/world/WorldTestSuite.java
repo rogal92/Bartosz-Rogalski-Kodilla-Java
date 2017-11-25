@@ -11,7 +11,6 @@ public class WorldTestSuite {
     @Test
     public void testGetPeopleQuantity(){
         //Given
-
         List<Country> countriesInEurope = new ArrayList<>();
         List<Country> countriesInAsia = new ArrayList<>();
 
@@ -27,21 +26,25 @@ public class WorldTestSuite {
         countriesInAsia.add(new Country("Japan", new BigDecimal("127000000")));
         countriesInAsia.add(new Country("China", new BigDecimal("1379000000")));
         countriesInAsia.add(new Country("Tailand", new BigDecimal("68860000")));
+
         List<Continent> continents = new ArrayList<>();
         continents.add(new Continent("Europe",countriesInEurope));
         continents.add(new Continent("Asia",countriesInAsia));
+
         //When
-//        BigDecimal totalPeopleQuantity = BigDecimal.ZERO;
+        BigDecimal totalPeopleQuantity = continents.stream()
+                .flatMap(c -> c.getCountries().stream()
+                .map(Country::getPeopleQuantity)
+                .reduce((BigDecimal.ZERO, (sum, current) -> sum.add(current));
+
 //        for(Continent : continents){
-//            totalPeopleQuantity = totalPeopleQuantity.add()
+//            totalPeopleQuantity = totalPeopleQuantity.add();
 //        }
 
         //Then
     }
 }
 
-//    List<Country> countries = new ArraysListy<>();
-//
-//countries.add(new Country("Poland", new BigDecimal(38000000)));
-//
-//        new Continent("Europe",  countries);
+//        BigDecimal totalSand = continents.stream()
+//        .map(SandStorage::getSandBeansQuantity)
+//        .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));

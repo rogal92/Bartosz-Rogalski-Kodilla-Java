@@ -1,5 +1,6 @@
 package com.kodilla.stream.world;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -37,14 +38,10 @@ public class WorldTestSuite {
                 .map(Country::getPeopleQuantity)
                 .reduce((BigDecimal.ZERO, (sum, current) -> sum.add(current));
 
-//        for(Continent : continents){
-//            totalPeopleQuantity = totalPeopleQuantity.add();
-//        }
-
         //Then
+
+        BigDecimal expectedPeopleQuantity = new BigDecimal("111");
+        Assert.assertEquals(expectedPeopleQuantity, totalPeopleQuantity);
     }
 }
 
-//        BigDecimal totalSand = continents.stream()
-//        .map(SandStorage::getSandBeansQuantity)
-//        .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));

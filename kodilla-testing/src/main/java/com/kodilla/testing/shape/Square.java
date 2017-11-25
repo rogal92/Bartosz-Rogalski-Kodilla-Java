@@ -2,8 +2,7 @@ package com.kodilla.testing.shape;
 
 public class Square implements Shape {
 
-
-    Double squareSide;
+    private Double squareSide;
 
     public Square(Double squareSide) {
         this.squareSide = squareSide;

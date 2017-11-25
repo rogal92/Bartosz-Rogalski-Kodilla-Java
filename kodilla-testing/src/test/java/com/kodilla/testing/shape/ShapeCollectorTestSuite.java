@@ -28,7 +28,7 @@ public class ShapeCollectorTestSuite {
 //When
         String name = circleName.getShapeName();
 //Then
-        Assert.assertEquals("Circle ", name);
+        Assert.assertEquals("Circle", name);
     }
     @Test
     public void testCircleField() {

@@ -9,7 +9,7 @@ public class ShapeCollector {
     public Shape addFigure(Shape shape) {
 
         figures.add(shape);
-        return null;
+        return shape;
     }
 
     public boolean removeFigure(Shape shape) {
@@ -25,7 +25,7 @@ public class ShapeCollector {
 
         StringBuilder sFigures = new StringBuilder();
         for (Shape shape: figures) {
-            System.out.println(sFigures.append(figures));
+            System.out.println(sFigures.append(shape));
         }
         return sFigures.toString();
     }

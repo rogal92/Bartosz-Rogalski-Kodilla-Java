@@ -28,7 +28,7 @@ public class ShapeCollectorTestSuite {
 //When
         String name = circleName.getShapeName();
 //Then
-        Assert.assertEquals("Circle", name);
+        Assert.assertEquals("Circle ", name);
     }
     @Test
     public void testCircleField() {
@@ -112,13 +112,15 @@ public class ShapeCollectorTestSuite {
 
 //        Given
         Circle circle = new Circle(2.0);
+        Triangle triangle = new Triangle(5.0,6.0);
         Circle circle1 = new Circle(2.0);
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(circle);
         shapeCollector.addFigure(circle1);
+        shapeCollector.addFigure(triangle);
 //        When
         String show = shapeCollector.showFigures();
 //        Then
-        Assert.assertEquals("Circle Circle ", shapeCollector.showFigures());
+        Assert.assertEquals("Circle Circle Triangle", shapeCollector.showFigures());
     }
 }

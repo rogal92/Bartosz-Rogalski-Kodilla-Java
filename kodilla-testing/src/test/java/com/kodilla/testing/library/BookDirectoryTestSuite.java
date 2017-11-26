@@ -1,17 +1,13 @@
 package com.kodilla.testing.library;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class BookDirectoryTestSuite {
 
@@ -99,17 +95,23 @@ public class BookDirectoryTestSuite {
         List<Book> resultListOfZeroBooks = new ArrayList<>();
         List<Book> resultListOfOneBook = generateListOfNBooks(1);
         List<Book> resultListOfFiveBooks = generateListOfNBooks(5);
-        when(libraryDatabaseMock.listBooksInHandsOf())
+
+        LibraryUser libraryUserOne = new LibraryUser("Anna", "Kowalska", "89106129");
+        LibraryUser libraryUserTwo = new LibraryUser("An", "Kowalskai", "8911006129");
+        LibraryUser libraryUserThree = new LibraryUser("Ann", "Kowalsk", "890306129");
+
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUserOne))
                 .thenReturn(resultListOfZeroBooks);
-        when(libraryDatabaseMock.listBooksInHandsOf())
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUserTwo))
                 .thenReturn(resultListOfOneBook);
-        when(libraryDatabaseMock.listBooksInHandsOf())
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUserThree))
                 .thenReturn(resultListOfFiveBooks);
 
+
         //When
-        List<Book> theListOfZeroBooks = bookLibrary.listBooksInHandsOf();
-        List<Book> theListOfOneBook = bookLibrary.listBooksInHandsOf();
-        List<Book> theListOfFiveBooks = bookLibrary.listBooksInHandsOf();
+        List<Book> theListOfZeroBooks = bookLibrary.listBooksInHandsOf(libraryUserOne);
+        List<Book> theListOfOneBook = bookLibrary.listBooksInHandsOf(libraryUserTwo);
+        List<Book> theListOfFiveBooks = bookLibrary.listBooksInHandsOf(libraryUserThree);
 
         //Then
         assertEquals(0, theListOfZeroBooks.size());

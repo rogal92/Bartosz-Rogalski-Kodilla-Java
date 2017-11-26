@@ -1,8 +1,11 @@
 package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
+import java.util.StringJoiner;
 
 public class ShapeCollector {
+
+    StringJoiner joiner = new StringJoiner(" ");
 
     ArrayList<Shape> figures = new ArrayList<>();
 
@@ -25,7 +28,7 @@ public class ShapeCollector {
 
         StringBuilder sFigures = new StringBuilder();
         for (Shape shape: figures) {
-            System.out.println(sFigures.append(shape));
+            System.out.println(sFigures.append(shape.getShapeName()+ joiner));
         }
         return sFigures.toString();
     }

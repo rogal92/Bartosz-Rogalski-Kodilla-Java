@@ -1,4 +1,4 @@
-package com.kodilla.com.kodilla.exception.nullpointer;
+package com.kodilla.exception.nullpointer;
 
 public class User {
     private String name;

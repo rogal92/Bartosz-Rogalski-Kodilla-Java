@@ -1,7 +1,7 @@
-package com.kodilla.com.kodilla.exception.main;
+package com.kodilla.exception.main;
 
-import com.kodilla.com.kodilla.exception.io.FileReader;
-import com.kodilla.com.kodilla.exception.io.FileReaderException;
+import com.kodilla.exception.io.FileReader;
+import com.kodilla.exception.io.FileReaderException;
 
 public class ExceptionModuleRunner {
     public static void main(String args[]){

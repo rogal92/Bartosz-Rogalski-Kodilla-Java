@@ -1,4 +1,4 @@
-package com.kodilla.com.kodilla.exception.test;
+package com.kodilla.exception.test;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package com.kodilla.com.kodilla.exception.nullpointer;
+package com.kodilla.exception.nullpointer;
 
 public class NullPointerExceptionRunner {
     public static void main(String[] args){

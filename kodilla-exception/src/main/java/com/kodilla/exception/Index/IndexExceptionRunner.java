@@ -9,11 +9,11 @@ public class IndexExceptionRunner {
         List<String> collection = videoCollector.getCollection();
 
 
-        if (collection.size() <= 2) {
+        if (collection.size() > 2) {
             String movie = collection.get(0);
             System.out.println(movie);
 
-            String otherMovie = collection.get(1);
+            String otherMovie = collection.get(2);
             System.out.println(otherMovie);
         }
     }

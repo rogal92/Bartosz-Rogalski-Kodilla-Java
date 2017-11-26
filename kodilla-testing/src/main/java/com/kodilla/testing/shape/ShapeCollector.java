@@ -5,8 +5,6 @@ import java.util.StringJoiner;
 
 public class ShapeCollector {
 
-    StringJoiner joiner = new StringJoiner(" ");
-
     ArrayList<Shape> figures = new ArrayList<>();
 
     public Shape addFigure(Shape shape) {
@@ -26,9 +24,9 @@ public class ShapeCollector {
 
     public String showFigures() {
 
-        StringBuilder sFigures = new StringBuilder();
-        for (Shape shape: figures) {
-            System.out.println(sFigures.append(shape.getShapeName()+ joiner));
+        StringJoiner sFigures = new StringJoiner(" ");
+        for(Shape shape: figures) {
+            System.out.println(sFigures.add(shape.getShapeName()));
         }
         return sFigures.toString();
     }

@@ -1,9 +1,8 @@
 package com.kodilla.stream.array;
 
-import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Random;
+import static org.junit.Assert.assertEquals;
 
 public class ArrayOperationTestSuite implements ArrayOperations {
 
@@ -32,12 +31,11 @@ public class ArrayOperationTestSuite implements ArrayOperations {
         number[17] = 51;
         number[18] = 71;
         number[19] = 51;
-        System.out.println(number.length);
 
         //when
         Double average = ArrayOperations.getAverage(number);
 
         //then
-        Assert.assertEquals(11, average);
+        assertEquals(new Double(11.0), average);
     }
 }

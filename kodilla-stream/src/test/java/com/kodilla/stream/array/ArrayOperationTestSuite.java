@@ -36,6 +36,6 @@ public class ArrayOperationTestSuite implements ArrayOperations {
         Double average = ArrayOperations.getAverage(number);
 
         //then
-        assertEquals(new Double(11.0), average);
+        assertEquals(new Double(17.05), average);
     }
 }

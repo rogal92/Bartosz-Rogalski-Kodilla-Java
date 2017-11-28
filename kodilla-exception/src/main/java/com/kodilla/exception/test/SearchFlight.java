@@ -18,20 +18,20 @@ public class SearchFlight {
 
     public boolean findFlight(Flight flight) throws RouteNotFoundException {
 
-        boolean contains = flight.getArrivalAirport().equals(airportsAvailibility);
+        boolean hasAirport = airportsAvailibility.containsKey(flight.getArrivalAirport());
 
-        if (contains) {
+        if (hasAirport) {
             return airportsAvailibility.containsKey("AirportSeven");
         }
-        throw new RouteNotFoundException();
+        throw new RouteNotFoundException("\nPlease choose one of our available airports from the schedule");
     }
     public static void main(String[] args) {
 
         try {
-            Flight flight = new Flight("AirportOne","AirportSeven");
-            flight.getArrivalAirport();
+            SearchFlight searchFlight = new SearchFlight();
+            searchFlight.findFlight(new Flight("AirportOne","AirportSeven"));
         } catch (Exception e) {
-            System.out.println("This airport is not available");
+            System.out.println("This airport is not available" + "\n"+ e);
         } finally {
             System.out.println("Thank you for using our airlines");
         }

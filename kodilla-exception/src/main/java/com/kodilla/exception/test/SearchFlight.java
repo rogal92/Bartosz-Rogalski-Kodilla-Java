@@ -6,8 +6,7 @@ public class SearchFlight {
 
     HashMap<String, Boolean> airportsAvailibility = new HashMap<>();
 
-    public SearchFlight(HashMap<String, Boolean> airportsAvailibility) {
-        this.airportsAvailibility = airportsAvailibility;
+    public SearchFlight() {
 
         airportsAvailibility.put("AirportOne",true);
         airportsAvailibility.put("AirportTwo", false);
@@ -17,18 +16,20 @@ public class SearchFlight {
         airportsAvailibility.put("AirportSix", true);
     }
 
-    public void findFlight(Flight flight) throws RouteNotFoundException {
+    public boolean findFlight(Flight flight) throws RouteNotFoundException {
 
-        Boolean contains = airportsAvailibility.containsKey("AirportSeven");
+        boolean contains = flight.getArrivalAirport().equals(airportsAvailibility);
 
-        if (contains == false) {
-            throw new RouteNotFoundException();
+        if (contains) {
+            return airportsAvailibility.containsKey("AirportSeven");
         }
+        throw new RouteNotFoundException();
     }
     public static void main(String[] args) {
 
         try {
-
+            Flight flight = new Flight("AirportOne","AirportSeven");
+            flight.getArrivalAirport();
         } catch (Exception e) {
             System.out.println("This airport is not available");
         } finally {

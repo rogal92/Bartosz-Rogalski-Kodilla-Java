@@ -36,12 +36,7 @@ public class WorldTestSuite {
         World world = new World();
         BigDecimal total = world.getPeopleQuantity();
 
-//                .flatMap(c -> c.getCountries().stream()
-//                .map(Country::getPeopleQuantity)
-//                .reduce((BigDecimal.ZERO, (sum, current) -> sum.add(current));
-
         //Then
-
         BigDecimal expectedPeopleQuantity = new BigDecimal("111");
         Assert.assertEquals(expectedPeopleQuantity, total);
     }

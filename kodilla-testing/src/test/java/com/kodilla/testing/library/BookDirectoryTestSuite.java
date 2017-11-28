@@ -97,7 +97,7 @@ public class BookDirectoryTestSuite {
         List<Book> resultListOfFiveBooks = generateListOfNBooks(5);
 
         LibraryUser libraryUserOne = new LibraryUser("Anna", "Kowalska", "89106129");
-        LibraryUser libraryUserTwo = new LibraryUser("An", "Kowalskai", "8911006129");
+        LibraryUser libraryUserTwo = new LibraryUser("An", "Kowalski", "8911006129");
         LibraryUser libraryUserThree = new LibraryUser("Ann", "Kowalsk", "890306129");
 
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUserOne))

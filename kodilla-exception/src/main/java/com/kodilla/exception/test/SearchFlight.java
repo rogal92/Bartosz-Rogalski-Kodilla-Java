@@ -21,7 +21,7 @@ public class SearchFlight {
         boolean hasAirport = airportsAvailibility.containsKey(flight.getArrivalAirport());
 
         if (hasAirport) {
-            return airportsAvailibility.containsKey("AirportSeven");
+            return airportsAvailibility.containsKey(flight.getArrivalAirport());
         }
         throw new RouteNotFoundException("\nPlease choose one of our available airports from the schedule");
     }

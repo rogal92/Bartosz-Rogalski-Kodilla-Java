@@ -28,10 +28,6 @@ public class WorldTestSuite {
         countriesInAsia.add(new Country("China", new BigDecimal("1379000000")));
         countriesInAsia.add(new Country("Tailand", new BigDecimal("68860000")));
 
-        List<Continent> continents = new ArrayList<>();
-        continents.add(new Continent("Europe",countriesInEurope));
-        continents.add(new Continent("Asia",countriesInAsia));
-
         //When
         World world = new World();
         world.addContinent(new Continent("Europe",countriesInEurope));

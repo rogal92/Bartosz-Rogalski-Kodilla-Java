@@ -12,8 +12,11 @@ public class ProductOrderService {
         this.orderRepository = orderRepository;
     }
 
+    public ProductOrderService(ItemOrderRepository itemOrderRepository, OrderRequest orderRequest) {
+    }
+
     public OrderDto process(final OrderRequest orderRequest) {
-        boolean isOrdered = orderService.rent(orderRequest.getUser(), orderRequest.getDate());
+        boolean isOrdered = orderService.order(orderRequest.getUser(), orderRequest.getDate());
 
         if (isOrdered) {
             informationService.inform(orderRequest.getUser());

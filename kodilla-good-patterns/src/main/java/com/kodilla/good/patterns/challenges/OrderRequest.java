@@ -2,14 +2,7 @@ package com.kodilla.good.patterns.challenges;
 
 import java.time.LocalDateTime;
 
-public class OrderRequest implements OrderService {
-
-    public OrderRequest() {}
-
-    @Override
-    public boolean order(User user, LocalDateTime orderDate) {
-        return false;
-    }
+public class OrderRequest {
 
     private User user;
     private LocalDateTime date;
@@ -17,6 +10,9 @@ public class OrderRequest implements OrderService {
     public OrderRequest(User user, LocalDateTime date) {
         this.user = user;
         this.date = date;
+    }
+
+    public OrderRequest() {
     }
 
     public User getUser() {

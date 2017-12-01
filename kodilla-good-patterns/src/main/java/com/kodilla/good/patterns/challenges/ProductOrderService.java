@@ -12,10 +12,6 @@ public class ProductOrderService {
         this.orderRepository = orderRepository;
     }
 
-    public ProductOrderService(OrderRepositoryImpl orderRepository,OrderRequest orderRequest) {
-        this.orderRepository = orderRepository;
-    }
-
     public OrderDto process(final OrderRequest orderRequest) {
         boolean isOrdered = orderService.order(orderRequest);
 

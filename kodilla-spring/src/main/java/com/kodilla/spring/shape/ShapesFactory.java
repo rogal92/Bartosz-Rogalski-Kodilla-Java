@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Random;
 
 @Configuration
-public class ShapeFactory {
+public class ShapesFactory {
     @Bean
     public Square createSquare() {
         return new Square();

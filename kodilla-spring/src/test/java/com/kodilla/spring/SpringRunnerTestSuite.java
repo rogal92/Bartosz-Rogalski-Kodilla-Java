@@ -1,6 +1,5 @@
 package com.kodilla.spring;
 
-import com.kodilla.spring.SpringRunner;
 import com.kodilla.spring.shape.Circle;
 import com.kodilla.spring.shape.Shape;
 import com.kodilla.spring.shape.Triangle;
@@ -11,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@RunWith(SpringRunner.class)
+@RunWith(org.springframework.test.context.junit4.SpringRunner.class)
 @SpringBootTest
 public class SpringRunnerTestSuite {
     @Test

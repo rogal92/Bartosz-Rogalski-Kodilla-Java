@@ -12,6 +12,6 @@ public class LoggerTestSuite {
         String lastLog = Logger.getInstance().getLastLog();
         System.out.println(lastLog);
         //Then
-        Assert.assertEquals("",lastLog);
+        Assert.assertEquals("This is a log",lastLog);
     }
 }

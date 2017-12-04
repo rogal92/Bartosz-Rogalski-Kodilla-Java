@@ -3,7 +3,7 @@ package com.kodilla.patterns.prototype;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskList {
+public class TasksList {
     final String name;
     final List<Task> tasks = new ArrayList<>();
 

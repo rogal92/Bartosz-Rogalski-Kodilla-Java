@@ -25,8 +25,8 @@ public class CalculatorTestSuite {
         double div = calculator.div(5.0,5.0);
         //Then
         Assert.assertEquals(10.0,add,0.01);
-        Assert.assertEquals(0.0,add,0.01);
-        Assert.assertEquals(25.0,add,0.01);
-        Assert.assertEquals(1.0,add,0.01);
+        Assert.assertEquals(0.0,sub,0.01);
+        Assert.assertEquals(25.0,mul,0.01);
+        Assert.assertEquals(1.0,div,0.01);
     }
 }

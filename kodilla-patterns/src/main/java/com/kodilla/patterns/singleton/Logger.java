@@ -13,10 +13,9 @@ public class Logger {
         }
         return loggerInstance;
     }
-    public String log(String log) {
+    public void log(String log) {
         lastLog = log;
         System.out.println("Log: [" + log + "]");
-        return log;
     }
 
     public String getLastLog() {

@@ -16,6 +16,3 @@ public class LoggerTestSuite {
         Assert.assertEquals("This is a log",lastLog);
     }
 }
- //   public static void openSettingsFile() {
-//        SettingsFileEngine.getInstance().open("myapp.settings");
-//    }

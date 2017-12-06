@@ -16,10 +16,6 @@ public class User {
         this.userName = userName;
     }
 
-    public void sharePost() {
-
-    }
-
     public String publish() {
         return socialPublisher.share();
     }

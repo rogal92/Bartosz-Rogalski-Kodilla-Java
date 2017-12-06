@@ -24,12 +24,12 @@ public class ShoppingTask implements Task{
     }
 
     @Override
-    public String executeTask() {
-        return null;
+    public Boolean executeTask() {
+        return true;
     }
 
     @Override
-    public boolean isTaskExecuted() {
+    public Boolean isTaskExecuted() {
         return false;
     }
 }

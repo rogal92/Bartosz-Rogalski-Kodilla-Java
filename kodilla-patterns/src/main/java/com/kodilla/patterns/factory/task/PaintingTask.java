@@ -4,12 +4,12 @@ public class PaintingTask implements Task{
 
     private String taskName;
     private String color;
-    private String whatToPoint;
+    private String whatToPaint;
 
     public PaintingTask(String taskName, String color, String whatToPoint) {
         this.taskName = taskName;
         this.color = color;
-        this.whatToPoint = whatToPoint;
+        this.whatToPaint = whatToPoint;
     }
 
     public String getTaskName() {
@@ -20,17 +20,17 @@ public class PaintingTask implements Task{
         return color;
     }
 
-    public String getWhatToPoint() {
-        return whatToPoint;
+    public String getWhatToPaint() {
+        return whatToPaint;
     }
 
     @Override
-    public String executeTask() {
-        return null;
+    public Boolean executeTask() {
+        return true;
     }
 
     @Override
-    public boolean isTaskExecuted() {
+    public Boolean isTaskExecuted() {
         return false;
     }
 }

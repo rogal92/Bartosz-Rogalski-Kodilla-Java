@@ -1,14 +1,14 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
 public class OrderDtoTwo {
-    public Suplier suplier;
+    public Supplier suplier;
     public boolean isOrdered;
 
-    public OrderDtoTwo(Suplier suplier, boolean isOrdered) {
+    public OrderDtoTwo(Supplier suplier, boolean isOrdered) {
         this.suplier = suplier;
         this.isOrdered = isOrdered;
     }
-    public Suplier getSuplier() {
+    public Supplier getSuplier() {
         return suplier;
     }
 

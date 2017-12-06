@@ -5,27 +5,21 @@ import java.util.HashMap;
 
 public class OrderApproach {
 
-    private Suplier suplier;
-    private Product product;
-    private HashMap<Suplier, Product> retriever;
+    private Supplier suplier;
+    private HashMap<Supplier, Product> retriever;
     private LocalDateTime orderDate;
 
-    public OrderApproach(Suplier suplier, Product product, HashMap<Suplier, Product> retriever, LocalDateTime orderDate) {
+    public OrderApproach(Supplier suplier, Product product, HashMap<Supplier, Product> retriever, LocalDateTime orderDate) {
         this.suplier = suplier;
-        this.product = product;
         this.retriever = retriever;
         this.orderDate = orderDate;
     }
 
-    public Suplier getSuplier() {
+    public Supplier getSuplier() {
         return suplier;
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public HashMap<Suplier, Product> getRetriever() {
+    public HashMap<Supplier, Product> getRetriever() {
         return retriever;
     }
 
@@ -41,7 +35,6 @@ public class OrderApproach {
         OrderApproach that = (OrderApproach) o;
 
         if (!suplier.equals(that.suplier)) return false;
-        if (!product.equals(that.product)) return false;
         if (!retriever.equals(that.retriever)) return false;
         return orderDate.equals(that.orderDate);
     }
@@ -49,7 +42,6 @@ public class OrderApproach {
     @Override
     public int hashCode() {
         int result = suplier.hashCode();
-        result = 31 * result + product.hashCode();
         result = 31 * result + retriever.hashCode();
         result = 31 * result + orderDate.hashCode();
         return result;

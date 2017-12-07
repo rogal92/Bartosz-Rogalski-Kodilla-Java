@@ -15,6 +15,7 @@ public class TaskFactory {
                 return new ShoppingTask("Spend 1 Million in 1 day","Only usefull thinks",1000000.0);
             default:
                 return null;
+
         }
     }
 }

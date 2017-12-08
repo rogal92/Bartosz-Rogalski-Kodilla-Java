@@ -7,65 +7,63 @@ public class Bigmac {
     private final String roll;
     private final int burgers;
     private final String sauce;
-    private final List<String> ingredients;
+    private final List<Ingredients> ingredients;
 
+    public enum Ingredients {
+        SALATA("sałata"),
+        CEBULA("cebula"),
+        BEKON("bekon"),
+        CHILLI("chilli"),
+        OGOREK("ogórek"),
+        PIECZARKI("pieczarki"),
+        SER("ser"),
+        KREWETKI("krewetki")
+    }
+
+    public class Enum {
+        Ingredients ingredients;
+
+        public Enum(Ingredients ingredients) {
+            this.ingredients = ingredients;
+        }
+    }
     public static class BigmacBuilder {
         private String roll;
         private int burgers;
         private String sauce;
-        private List<String> ingredients = new ArrayList<>();
+        private List<Ingredients> ingredients = new ArrayList<>();
 
-        public BigmacBuilder roll(String roll) {
+        public BigmacBuilder(String roll, int burgers, String sauce, List<Ingredients> ingredients) {
             this.roll = roll;
-            return this;
-        }
-        public BigmacBuilder burgers(int burgers) {
             this.burgers = burgers;
-            return this;
-        }
-        public BigmacBuilder sauce(String sauce) {
             this.sauce = sauce;
-            return this;
+            this.ingredients = ingredients;
         }
-        public BigmacBuilder ingredient(String ingredient) {
-            ingredients.add(ingredient);
-            return this;
+
+        public String getRoll() {
+            return roll;
         }
-        public Bigmac build() {
-            return new Bigmac(roll, burgers, sauce, ingredients);
+
+        public int getBurgers() {
+            return burgers;
         }
-    }
 
-    private Bigmac(String roll, int burgers, String sauce, List<String> ingredients) {
-        this.roll = roll;
-        this.burgers = burgers;
-        this.sauce = sauce;
-        this.ingredients = ingredients;
-    }
+        public String getSauce() {
+            return sauce;
+        }
 
-    public String getRoll() {
-        return roll;
-    }
+        public List<Ingredients> getIngredients() {
+            return ingredients;
+        }
 
-    public int getBurgers() {
-        return burgers;
-    }
-
-    public String getSauce() {
-        return sauce;
-    }
-
-    public List<String> getIngredients() {
-        return ingredients;
-    }
-
-    @Override
-    public String toString() {
-        return "Bigmac{" +
-                "roll='" + roll + '\'' +
-                ", burgers=" + burgers +
-                ", sauce='" + sauce + '\'' +
-                ", ingredients=" + ingredients +
-                '}';
+        @Override
+        public String toString() {
+            return "BigmacBuilder{" +
+                    "roll='" + roll + '\'' +
+                    ", burgers=" + burgers +
+                    ", sauce='" + sauce + '\'' +
+                    ", ingredients=" + ingredients +
+                    '}';
+        }
     }
 }

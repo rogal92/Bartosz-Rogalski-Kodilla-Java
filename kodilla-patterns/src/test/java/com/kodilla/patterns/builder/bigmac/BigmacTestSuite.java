@@ -11,9 +11,6 @@ public class BigmacTestSuite {
                 .roll("Standard")
                 .burgers(3)
                 .sauce("Thousand Islands")
-                .ingredient("Cheese")
-                .ingredient("Becon")
-                .ingredient("Chilli")
                 .build();
         System.out.println(bigmac);
         //When

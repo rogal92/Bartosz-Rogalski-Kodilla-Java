@@ -5,7 +5,7 @@ public class TaskFactory {
     public static final String PAINTINGTASK = "PAINTINGTASK";
     public static final String SHOPPINGTASK = "SHOPPINGTASK";
 
-    public final Task doTask(final String taskClass) throws IllegalArgumentException {
+    public final Task doTask(final String taskClass) {
         switch(taskClass) {
             case DRIVINGTASK:
                 return new DrivingTask("Make an eight","Near Driving School","Honda Africa Twin");

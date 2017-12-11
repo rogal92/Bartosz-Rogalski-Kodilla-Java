@@ -16,38 +16,5 @@ public class Supplier {
         this.nip = nip;
         this.products = products;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public int getNip() {
-        return nip;
-    }
-
-    public void setNip(int nip) {
-        this.nip = nip;
-    }
-
-    public Set<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
 }
-
 

@@ -1,5 +1,6 @@
 package com.kodilla.good.patterns.challenges;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class MovieStoreTestSuite {
@@ -8,12 +9,15 @@ public class MovieStoreTestSuite {
     public void testAddList() {
         //Given
         MovieStore movieStore = new MovieStore();
-        movieStore.getMovies();
-
-
-
+        MyMovie myMovieOne = new MyMovie("Iron Man", "Żelazny Człowiek");
+        MyMovie myMovieTwo = new MyMovie("Avengers","Mściciele");
+        MyMovie myMovieThree = new MyMovie("Flash", "Błyskawica");
         //When
+        movieStore.addMovie(myMovieOne);
+        movieStore.addMovie(myMovieTwo);
+        movieStore.addMovie(myMovieThree);
         //Then
+        Assert.assertEquals("n",movieStore.getMovies());
 
     }
 }

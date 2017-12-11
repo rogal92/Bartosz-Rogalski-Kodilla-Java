@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class OrderRepositoryTwoImpl implements OrderRepositoryTwo{
     @Override
-    public boolean generateOrder(Supplier suplier, LocalDateTime orderDate) {
+    public boolean generateOrder(User user, LocalDateTime orderDate) {
         return false;
     }
 }

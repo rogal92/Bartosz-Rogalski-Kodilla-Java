@@ -1,4 +1,5 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.flights;
 
-public class Search {
+public interface Search {
+    void search(AllFlights allFlights);
 }

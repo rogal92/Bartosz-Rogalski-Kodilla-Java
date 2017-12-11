@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges;
 
-public class MyMovie {
+public final class MyMovie {
     private String title;
     private String translation;
 

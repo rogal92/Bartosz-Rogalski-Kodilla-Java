@@ -16,4 +16,6 @@ public final class MyMovie {
     public String getTranslation() {
         return translation;
     }
-}
+
+    }
+

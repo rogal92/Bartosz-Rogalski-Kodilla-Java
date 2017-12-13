@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.challenges.challengesTwo.flights;
 
 public class AllFlights {
 
-    public Airports krakow() {
+    public Flight krakow() {
         krakow().getDepartureAirport().add("Kraków");
         krakow().getArrivalAirport().add("Warszawa");
         krakow().getArrivalAirport().add("Gdańsk");
@@ -10,14 +10,14 @@ public class AllFlights {
         krakow().getArrivalAirport().add("Katowice");
         return krakow();
     }
-    public Airports wroclaw() {
+    public Flight wroclaw() {
         wroclaw().getDepartureAirport().add("Wrocław");
         wroclaw().getArrivalAirport().add("Kraków");
         wroclaw().getArrivalAirport().add("Warszawa");
         wroclaw().getArrivalAirport().add("Gdańsk");
         return wroclaw();
     }
-    public Airports warszawa() {
+    public Flight warszawa() {
         warszawa().getDepartureAirport().add("Warszawa");
         warszawa().getArrivalAirport().add("Kraków");
         warszawa().getArrivalAirport().add("Gdańsk");
@@ -25,7 +25,7 @@ public class AllFlights {
         warszawa().getArrivalAirport().add("Wrocław");
         return warszawa();
     }
-    public Airports gdansk() {
+    public Flight gdansk() {
         gdansk().getDepartureAirport().add("Gdańsk");
         gdansk().getArrivalAirport().add("Warszawa");
         gdansk().getArrivalAirport().add("Wrocław");
@@ -33,7 +33,7 @@ public class AllFlights {
         gdansk().getArrivalAirport().add("Kraków");
         return gdansk();
     }
-    public Airports katowice() {
+    public Flight katowice() {
         katowice().getDepartureAirport().add("Katowice");
         katowice().getArrivalAirport().add("Warszawa");
         katowice().getArrivalAirport().add("Gdańsk");

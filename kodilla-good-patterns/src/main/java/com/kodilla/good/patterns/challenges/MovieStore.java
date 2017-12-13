@@ -15,21 +15,14 @@ public class MovieStore {
     public MovieStore() {
     }
 
-    public List<MyMovie> getMovies() {
-        movies.stream()
+    public String getMovies() {
+     String moviess = movies.stream()
                 .map(m -> m.getTitle())
-                .collect(Collectors.joining("!"));
-        return movies;
+                .collect(Collectors.joining("!","!","!"));
+        return moviess;
     }
 
     public void addMovie(MyMovie myMovie) {
         movies.add(myMovie);
-    }
-
-    @Override
-    public String toString() {
-        return "MovieStore{" +
-                "movies=" + movies +
-                '}';
     }
 }

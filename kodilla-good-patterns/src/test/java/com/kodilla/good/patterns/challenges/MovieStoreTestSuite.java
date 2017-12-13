@@ -17,7 +17,7 @@ public class MovieStoreTestSuite {
         movieStore.addMovie(myMovieTwo);
         movieStore.addMovie(myMovieThree);
         //Then
-        Assert.assertEquals("n",movieStore.getMovies());
+        Assert.assertEquals("!Iron Man!Avengers!Flash!",movieStore.getMovies());
 
     }
 }

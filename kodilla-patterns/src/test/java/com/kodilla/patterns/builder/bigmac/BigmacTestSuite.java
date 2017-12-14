@@ -11,11 +11,15 @@ public class BigmacTestSuite {
                 .roll("Standard")
                 .burgers(3)
                 .sauce("Thousand Islands")
+                .ingredient(Bigmac.Ingredients.CHILLI)
+                .ingredient(Bigmac.Ingredients.BEKON)
+                .ingredient(Bigmac.Ingredients.SER)
+                .ingredient(Bigmac.Ingredients.SALATA)
                 .build();
         System.out.println(bigmac);
         //When
         int ingredientsAmount = bigmac.getIngredients().size();
         //Then
-        Assert.assertEquals(3, ingredientsAmount);
+        Assert.assertEquals(4, ingredientsAmount);
     }
 }

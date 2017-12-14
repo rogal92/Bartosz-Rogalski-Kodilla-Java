@@ -1,21 +1,19 @@
+
 package com.kodilla.good.patterns.challenges;
 
+import java.util.List;
+
 public final class MyMovie {
-    private String title;
-    private String translation;
+    private List<String> translation;
+    private String id;
 
-    public MyMovie(String title, String translation) {
-        this.title = title;
+    public MyMovie(List<String> translation, String id) {
         this.translation = translation;
+        this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public String getTranslation() {
+    public List<String> getTranslation() {
         return translation;
     }
-
-    }
+}
 

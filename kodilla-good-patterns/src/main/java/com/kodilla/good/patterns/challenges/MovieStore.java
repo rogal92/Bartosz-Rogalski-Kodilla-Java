@@ -16,10 +16,10 @@ public class MovieStore {
     }
 
     public String getMovies() {
-     String moviess = movies.stream()
-                .map(m -> m.getTitle())
-                .collect(Collectors.joining("!","!","!"));
-        return moviess;
+        String moviesStream = movies.stream()
+                .flatMap(myMovie -> myMovie.getTranslation().stream())
+                .collect(Collectors.joining("!", "!", "!"));
+        return moviesStream;
     }
 
     public void addMovie(MyMovie myMovie) {

@@ -42,7 +42,7 @@ public class DbManagerTestSuite {
         @Test
         public void testSelectUsersAndPosts () throws SQLException {
             //Given
-            DbManager dbManagerTwo = new DbManager.getInstance();
+            DbManager dbManagerTwo = DbManager.getInstance();
 
             //When
             String sqlQueryTwo = "SELECT U.FIRSTNAME, U.LASTNAME, P.USER_ID, COUNT(*) AS POSTS_NUMBER\n" +

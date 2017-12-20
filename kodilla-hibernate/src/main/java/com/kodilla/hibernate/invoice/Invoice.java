@@ -7,16 +7,15 @@ import java.util.List;
 
 
 @Entity
+
 @Table(name = "INVOICES")
 public class Invoice {
     private int id;
     private String number;
     private List<Item> items = new ArrayList<>();
 
-    public Invoice(int id, String number, List<Item> items) {
-        this.id = id;
+    public Invoice( String number) {
         this.number = number;
-        this.items = items;
     }
 
     public Invoice() {
@@ -50,6 +49,11 @@ public class Invoice {
     )
     public List<Item> getItems() {
         return items;
+    }
+
+    public void addItem(Item item) {
+        item.setInvoice(this);
+        items.add(item);
     }
 
     public void setItems(List<Item> items) {

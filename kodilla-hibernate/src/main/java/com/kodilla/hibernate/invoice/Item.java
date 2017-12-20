@@ -1,5 +1,7 @@
 package com.kodilla.hibernate.invoice;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -14,13 +16,11 @@ public class Item {
     private BigDecimal value;
     private Invoice invoice;
 
-    public Item(int id, Product product, BigDecimal price, int quantity, BigDecimal value, Invoice invoice) {
-        this.id = id;
+    public Item(Product product, BigDecimal price, int quantity, BigDecimal value) {
         this.product = product;
         this.price = price;
         this.quantity = quantity;
         this.value = value;
-        this.invoice = invoice;
     }
 
     public Item() {
@@ -37,7 +37,7 @@ public class Item {
     public void setId(int id) {
         this.id = id;
     }
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;

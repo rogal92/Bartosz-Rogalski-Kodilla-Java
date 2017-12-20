@@ -2,8 +2,12 @@ package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
 public class InformationServiceTwoImpl implements InformationServiceTwo {
 
+
+    public InformationServiceTwoImpl() {
+    }
+
     @Override
-    public void inform(OrderApproach orderApproach) {
-        System.out.println("Your order is in process" + orderApproach);
+    public void inform(User user) {
+        System.out.println("Your order is being prepared");
     }
 }

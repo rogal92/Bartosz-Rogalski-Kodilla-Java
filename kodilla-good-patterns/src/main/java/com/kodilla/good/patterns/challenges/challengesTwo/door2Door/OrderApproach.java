@@ -2,18 +2,24 @@ package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 
 public class OrderApproach {
 
-    private HashMap<User, Product> retriever;
+    private List<Product> retriever;
     private LocalDateTime orderDate;
+    private User user;
 
-    public OrderApproach(HashMap<User, Product> retriever, LocalDateTime orderDate) {
+    public OrderApproach(List<Product> retriever, LocalDateTime orderDate, User user) {
         this.retriever = retriever;
         this.orderDate = orderDate;
+        this.user = user;
     }
 
-    public HashMap<User, Product> getRetriever() {
+    public OrderApproach() {
+    }
+
+    public List<Product> getRetriever() {
         return retriever;
     }
 
@@ -21,22 +27,8 @@ public class OrderApproach {
         return orderDate;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        OrderApproach that = (OrderApproach) o;
-
-        if (!retriever.equals(that.retriever)) return false;
-        return orderDate.equals(that.orderDate);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = retriever.hashCode();
-        result = 31 * result + orderDate.hashCode();
-        return result;
+    public User getUser() {
+        return user;
     }
 }
 

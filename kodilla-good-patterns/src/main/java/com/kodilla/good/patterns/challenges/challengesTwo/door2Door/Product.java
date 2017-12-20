@@ -1,12 +1,16 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
-public class Product {
-   private String productName;
-   private int amount;
+import java.util.List;
 
-    public Product(String productName, int amount) {
+public class Product {
+    private String productName;
+    private int amount;
+    private SupplierImpl supplier;
+
+    public Product(String productName, int amount, SupplierImpl supplier) {
         this.productName = productName;
         this.amount = amount;
+        this.supplier = supplier;
     }
 
     public String getProductName() {
@@ -15,5 +19,9 @@ public class Product {
 
     public int getAmount() {
         return amount;
+    }
+
+    public SupplierImpl getSupplier() {
+        return supplier;
     }
 }

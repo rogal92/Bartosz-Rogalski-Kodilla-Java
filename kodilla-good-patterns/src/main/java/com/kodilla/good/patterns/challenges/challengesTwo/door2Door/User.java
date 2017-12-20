@@ -4,13 +4,11 @@ public class User {
     private String name;
     private String surname;
     private int age;
-    private char gender;
 
-    public User(String name, String surname, int age, char gender) {
+    public User(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.gender = gender;
     }
 
     public String getName() {
@@ -25,17 +23,12 @@ public class User {
         return age;
     }
 
-    public char getGender() {
-        return gender;
-    }
-
     @Override
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
-                ", gender=" + gender +
                 '}';
     }
 }

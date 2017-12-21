@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 @NamedQueries({
         @NamedQuery(
-                name = "Task.retrieveLongTask",
+                name = "Task.retrieveLongTasks",
                 query = "FROM Task WHERE duration > 10"
         ),
         @NamedQuery(
@@ -20,7 +20,7 @@ import java.util.Date;
         )
 })
 @NamedNativeQuery(
-        name = "Task.retrieveWithEnoughTime",
+        name = "Task.retrieveTasksWithEnoughTime",
         query = "SELECT * FROM TASSKS" + "WHERE DATEDIFF(DATE_ADD(CREATED, INTERVAL DURATION DAY ) , NOW()) > 5",
         resultClass = Task.class
 )

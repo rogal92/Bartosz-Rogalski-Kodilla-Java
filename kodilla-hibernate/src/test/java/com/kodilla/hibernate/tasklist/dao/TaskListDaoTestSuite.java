@@ -23,7 +23,7 @@ public class TaskListDaoTestSuite {
     private static final String DESCRIPTION = "Test: find by name";
     @Autowired
     private TaskDao taskDao;
-    private static String LISTNAME = "ToDo Tasks";
+    private static final String LISTNAME = "ToDo Tasks";
 
     @Test
     public void testFindByListName() {

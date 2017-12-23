@@ -10,8 +10,8 @@ import java.util.List;
 
 @Transactional
 @Repository
-public interface EmployeeDao extends CrudRepository<Employee, String> {
+public interface EmployeeDao extends CrudRepository<Employee, Integer> {
 
-    @Query
+    @Query(countQuery = "FROM Employee WHERE lastname = :LASTNAME")
     List<Employee>retrieveEmployeeWithPassedSurname(String surname);
 }

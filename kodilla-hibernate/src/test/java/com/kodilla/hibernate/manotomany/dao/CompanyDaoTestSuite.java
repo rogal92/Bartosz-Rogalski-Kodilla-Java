@@ -18,6 +18,7 @@ import java.util.List;
 public class CompanyDaoTestSuite {
     @Autowired
     CompanyDao companyDao;
+    @Autowired
     EmployeeDao employeeDao;
 
     @Test
@@ -77,6 +78,19 @@ public class CompanyDaoTestSuite {
         List<Employee> employees = employeeDao.retrieveEmployeeWithPassedSurname(surname);
 
         //Then
-        Assert.assertEquals("Konrad",employeeOne);
+        Assert.assertEquals("Konrad",employees);
+    }
+    @Test
+    public void testCompany() {
+        //Given
+        Company companyOne = new Company("Adidas");
+        companyDao.save(companyOne);
+        String firstThreeLetters = companyOne.getName();
+
+        //When
+        List<Company> companies = companyDao.retrieveCompaniesWithPassedSignes(firstThreeLetters);
+
+        //Then
+        Assert.assertEquals("Adi",companies);
     }
 }

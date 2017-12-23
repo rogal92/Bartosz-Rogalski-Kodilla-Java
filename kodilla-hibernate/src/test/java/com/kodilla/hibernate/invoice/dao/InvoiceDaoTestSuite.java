@@ -22,9 +22,15 @@ public class InvoiceDaoTestSuite {
     public void testInvoiceDaoSave() {
         //Given
         Product product = new Product("ProductOne");
+        Product productTwo = new Product("ProductTwo");
+        Product productThree = new Product("ProductThree");
         Item item = new Item(product, new BigDecimal("500"),1000,new BigDecimal("1000"));
+        Item itemTwo = new Item(productTwo, new BigDecimal("300"),2000,new BigDecimal("500"));
+        Item itemThree = new Item(productThree,new BigDecimal("350"),2000,new BigDecimal("600"));
         Invoice invoice = new Invoice( "number");
         invoice.addItem(item);
+        invoice.addItem(itemTwo);
+        invoice.addItem(itemThree);
 
         //When
         invoiceDao.save(invoice);

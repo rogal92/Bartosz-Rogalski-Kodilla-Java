@@ -7,8 +7,7 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompaniesWithPassedSignes",
-        query = "SELECT COMPANY_NAME FROM COMPANIES" +
-                "WHERE COMPANIES LIKE = :NAME ",
+        query = "SELECT SUBSTRING(COMPANY_NAME, 0,3 )",
         resultClass = Company.class
 )
 @Entity

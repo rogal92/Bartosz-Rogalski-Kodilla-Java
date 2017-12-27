@@ -1,3 +1,11 @@
 include 'kodilla-testing'
-include 'kodilla-testing'
+include 'good-patterns'
+include 'kodilla-rps'
+include 'kodilla-good-patterns'
+include 'kodilla-hibernate'
+include 'kodilla-spring'
+include 'kodilla-stream'
+include 'kodilla-spring-web'
+include 'kodilla-exception'
+include 'kodilla-jdbc'
 

@@ -92,6 +92,6 @@ public class CompanyDaoTestSuite {
         List<Company> companies = companyDao.retrieveCompaniesWithPassedSignes(firstThreeLetters);
 
         //Then
-        Assert.assertEquals("Adi",companies);
+        Assert.assertEquals("Adidas",companies);
     }
 }

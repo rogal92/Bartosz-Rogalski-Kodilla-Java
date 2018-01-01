@@ -1,5 +1,5 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
 public interface Supplier {
-    void getSupplier(SupplierImpl supplier);
+    void process(SupplierImpl supplier);
 }

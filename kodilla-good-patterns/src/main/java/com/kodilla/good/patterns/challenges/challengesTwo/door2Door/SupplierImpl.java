@@ -8,11 +8,17 @@ public class SupplierImpl {
     private String name;
     private String adress;
     private int nip;
+    private int id;
 
-    public SupplierImpl(String name, String adress, int nip) {
+    public SupplierImpl(String name, String adress, int nip, int id) {
         this.name = name;
         this.adress = adress;
         this.nip = nip;
+        this.id = id;
+    }
+
+    public SupplierImpl(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -26,5 +32,6 @@ public class SupplierImpl {
     public int getNip() {
         return nip;
     }
-}
 
+    public int getId() {return id; }
+}

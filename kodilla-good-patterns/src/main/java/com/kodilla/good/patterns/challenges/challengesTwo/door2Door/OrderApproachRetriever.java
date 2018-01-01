@@ -7,17 +7,16 @@ package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 public class OrderApproachRetriever {
 
     public OrderApproach retrieve() {
-        SupplierImpl supplierOne = new SupplierImpl("Extra food shop", "Ząb", 1231241123);
         User user = new User("Piotr", "Piotrzewski", 25);
-        Product productOne = new Product("Extra food product", 500,supplierOne);
+        Product productOne = new Product("Extra food product", 500,supplier -> supplier.getId());
         LocalDateTime orderDate = LocalDateTime.of(2017,12,16,15,22);
 
         HashMap<String, SupplierImpl> suppliers = new HashMap<>();
-        suppliers.put("SupplierOne", supplierOne);
+        suppliers.put("SupplierOne", new SupplierImpl)
 
         OrderApproach productList = new OrderApproach();
         productList.getRetriever().add(productOne);
 
-        return new OrderApproach(productList,orderDate,user);
+        return new OrderApproach(productList.getRetriever(),orderDate,user);
     }
 }

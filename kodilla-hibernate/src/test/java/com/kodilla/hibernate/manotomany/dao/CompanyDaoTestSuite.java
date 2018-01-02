@@ -5,6 +5,7 @@ import com.kodilla.hibernate.manytomany.Employee;
 import com.kodilla.hibernate.manytomany.dao.CompanyDao;
 import com.kodilla.hibernate.manytomany.dao.EmployeeDao;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,6 @@ public class CompanyDaoTestSuite {
     CompanyDao companyDao;
     @Autowired
     EmployeeDao employeeDao;
-
 
     @Test
     public void testSaveManyToMany() {
@@ -79,7 +79,10 @@ public class CompanyDaoTestSuite {
         List<Employee> employees = employeeDao.retrieveEmployeeWithPassedSurname(surname);
 
         //Then
-        Assert.assertEquals("Konrad",employees);
+        Assert.assertEquals(1, employees.size());
+        Assert.assertEquals("Konrad",employees.get(0).getLastname());
+        //cleanUp
+        employeeDao.delete(employeeOne.getId());
     }
     @Test
     public void testCompany() {
@@ -92,6 +95,9 @@ public class CompanyDaoTestSuite {
         List<Company> companies = companyDao.retrieveCompaniesWithPassedSignes(firstThreeLetters);
 
         //Then
-        Assert.assertEquals("Adidas",companies);
+        Assert.assertEquals(0,companies.size());
+        Assert.assertEquals("Adi",companies.get(0).getName());
+        //CleanUp
+        companyDao.delete(companyOne.getId());
     }
 }

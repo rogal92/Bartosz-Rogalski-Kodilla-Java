@@ -1,4 +1,7 @@
 package com.kodilla.rps;
 
-public class rpsItems {
+public interface rpsItems {
+    enum CHOICES {ROCK, PAPER, SCISSORS};
+    enum RESULTS {WIN, LOOSE, TIE};
+
 }

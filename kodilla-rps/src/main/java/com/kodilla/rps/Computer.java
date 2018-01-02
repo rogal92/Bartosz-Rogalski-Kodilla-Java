@@ -1,4 +1,31 @@
 package com.kodilla.rps;
 
-public class Computer {
+import java.util.Random;
+
+public class Computer implements rpsItems{
+    private Random rand;
+
+    public Computer(Random rand) {
+        this.rand = rand;
+    }
+
+    public Computer() {
+
+        rand = new Random();
+    }
+
+    public CHOICES getChoice() {
+
+        int choice = 1 + rand.nextInt(3);
+
+        if(choice == 1) {
+            return CHOICES.ROCK;
+        }
+        else if (choice == 2) {
+            return CHOICES.PAPER;
+        }
+        else {
+            return CHOICES.SCISSORS;
+        }
+    }
 }

@@ -95,7 +95,7 @@ public class CompanyDaoTestSuite {
         List<Company> companies = companyDao.retrieveCompaniesWithPassedSignes(firstThreeLetters);
 
         //Then
-        Assert.assertEquals(0,companies.size());
+        Assert.assertEquals(1,companies.size());
         Assert.assertEquals("Adi",companies.get(0).getName());
         //CleanUp
         companyDao.delete(companyOne.getId());

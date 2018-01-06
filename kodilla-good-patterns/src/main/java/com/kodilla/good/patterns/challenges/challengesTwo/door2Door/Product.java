@@ -5,9 +5,9 @@ import java.util.List;
 public class Product {
     private String productName;
     private int amount;
-    private Supplier id;
+    private String id;
 
-    public Product(String productName, int amount, Supplier id) {
+    public Product(String productName, int amount, String id) {
         this.productName = productName;
         this.amount = amount;
         this.id = id;
@@ -21,7 +21,7 @@ public class Product {
         return amount;
     }
 
-    public Supplier getId() {
+    public String getId() {
         return id;
     }
 }

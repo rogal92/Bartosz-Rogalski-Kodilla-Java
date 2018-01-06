@@ -8,4 +8,8 @@ public class SupplierOne implements Supplier {
         supplier.getNip();
         supplier.getId();
     }
+    @Override
+    public void getId(String id) {
+        id = "Extra food shop";
+    }
 }

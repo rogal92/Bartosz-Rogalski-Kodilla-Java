@@ -8,4 +8,9 @@ public class SupplierTwo implements Supplier {
         supplier.getNip();
         supplier.getId();
     }
+
+    @Override
+    public void getId(String id) {
+        id = "Healthy shop";
+    }
 }

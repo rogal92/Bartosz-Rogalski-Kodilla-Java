@@ -8,4 +8,8 @@ public class SupplierThree implements Supplier {
         supplier.getNip();
         supplier.getId();
     }
+    @Override
+    public void getId(String id) {
+        id = "Gluten free shop";
+    }
 }

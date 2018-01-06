@@ -17,10 +17,6 @@ public class SupplierImpl {
         this.id = id;
     }
 
-    public SupplierImpl(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }

@@ -7,7 +7,7 @@ public class RpsRunner {
         Game game = new Game();
         game.introduction();
 
-        while (game.getComputerScore() < 3 || game.getPlayerScore() < 3) {
+        while (game.statisticsClass.getComputerScore() < 3 || game.statisticsClass.getPlayerScore() < 3) {
             game.play();
         }
     }

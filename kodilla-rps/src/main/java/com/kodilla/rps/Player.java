@@ -1,10 +1,8 @@
 package com.kodilla.rps;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Scanner;
 
-public class Player implements rpsItems {
+public class Player implements RpsItems {
 
     Scanner scanner;
 

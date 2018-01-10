@@ -2,7 +2,7 @@ package com.kodilla.rps;
 
 import java.util.Random;
 
-public class Computer implements rpsItems{
+public class Computer implements RpsItems {
     private Random rand;
 
     public Computer(Random rand) {

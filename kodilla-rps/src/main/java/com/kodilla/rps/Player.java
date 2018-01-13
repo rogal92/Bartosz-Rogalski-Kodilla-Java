@@ -10,7 +10,6 @@ public class Player implements RpsItems {
         scanner = new Scanner(System.in);
     }
 
-
     public CHOICES getChoice() {
 
         System.out.println("Please choose '1' for rock, '2' for paper or '3' for scissors :)");

@@ -2,29 +2,24 @@ package com.kodilla.rps;
 
 public class Statistics implements RpsItems {
 
-    private RpsItems.CHOICES playerChoices;
-    private RpsItems.CHOICES computerChoices;
     private RpsItems.RESULTS results;
     private int playerScore;
     private int computerScore;
     private int gamesPlayed;
 
-    public Statistics(CHOICES playerChoices, CHOICES computerChoices, RESULTS results, int playerScore, int computerScore, int gamesPlayed) {
-        this.playerChoices = playerChoices;
-        this.computerChoices = computerChoices;
+    public Statistics(RESULTS results, int playerScore, int computerScore, int gamesPlayed) {
         this.results = results;
         this.playerScore = playerScore;
         this.computerScore = computerScore;
         this.gamesPlayed = gamesPlayed;
     }
 
-    public CHOICES getPlayerChoices() {
-        return playerChoices;
+    public Statistics() {
     }
 
-    public CHOICES getComputerChoices() {
-        return computerChoices;
-    }
+    Computer computer = new Computer();
+    Player player = new Player();
+    Game game = new Game();
 
     public int getPlayerScore() {
         return playerScore;
@@ -34,21 +29,17 @@ public class Statistics implements RpsItems {
         return computerScore;
     }
 
-    public Statistics() {
-    }
-    Game game = new Game();
-
     public RESULTS getResults() {
-        if (playerChoices == computerChoices)
+        if (player.getChoice() == computer.getChoice())
             return RESULTS.TIE;
-        switch (playerChoices) {
+        switch (player.getChoice()) {
 
             case ROCK:
-                return (computerChoices == CHOICES.SCISSORS ? RESULTS.WIN : RESULTS.LOOSE);
+                return (computer.getChoice() == CHOICES.SCISSORS ? RESULTS.WIN : RESULTS.LOOSE);
             case PAPER:
-                return (computerChoices == CHOICES.ROCK ? RESULTS.WIN : RESULTS.LOOSE);
+                return (computer.getChoice() == CHOICES.ROCK ? RESULTS.WIN : RESULTS.LOOSE);
             case SCISSORS:
-                return (computerChoices == CHOICES.PAPER ? RESULTS.WIN : RESULTS.LOOSE);
+                return (computer.getChoice() == CHOICES.PAPER ? RESULTS.WIN : RESULTS.LOOSE);
             default:
                 throw new IllegalArgumentException();
         }
@@ -57,13 +48,13 @@ public class Statistics implements RpsItems {
     public void displayResults() {
 
         if (results.equals(RESULTS.TIE)) {
-            System.out.println(playerChoices + " " + "Is the same with" + " " + computerChoices);
+            System.out.println(player.getChoice() + " " + "Is the same with" + " " + computer.getChoice());
             System.out.println("It is a Tie!");
         } else if (results.equals(RESULTS.LOOSE)) {
-            System.out.println(computerChoices + " " + "beats" + " " + playerChoices);
+            System.out.println(computer.getChoice() + " " + "beats" + " " + player.getChoice());
             System.out.println("You lost!");
         } else if (results.equals(RESULTS.WIN)) {
-            System.out.println(playerChoices + " " + "beats" + " " + computerChoices);
+            System.out.println(player.getChoice() + " " + "beats" + " " + computer.getChoice());
             System.out.println("WINNER!");
         }
     }
@@ -93,6 +84,7 @@ public class Statistics implements RpsItems {
             System.out.println("Game ends with 3 points scored");
         }
     }
+    public void updateStatistic(player.getChoice)
 
     public void endingStats() {
         System.out.println("Games amount: " + gamesPlayed);

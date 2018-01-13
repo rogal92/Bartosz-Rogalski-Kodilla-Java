@@ -15,7 +15,7 @@ public class Game implements RpsItems {
     public Game() {
     }
 
-    Statistics statisticsClass = new Statistics();
+    Statistics stats = new Statistics();
 
     public void introduction() {
 
@@ -30,16 +30,17 @@ public class Game implements RpsItems {
     }
 
     public void play() {
-        statisticsClass.getPlayerChoices() = player.getChoice();
-        statisticsClass.getComputerChoices() = computer.getChoice();
-        statisticsClass.getResults();
-        statisticsClass.displayResults();
-        statisticsClass.statistics();
-        statisticsClass.endingStats();
+//        stats.getPlayerChoices() = player.getChoice();
+//        stats.getComputerChoices() = computer.getChoice();
+
+        stats.getResults();
+        stats.displayResults();
+        stats.statistics();
+        stats.endingStats();
     }
 
     public void playAgain() {
-        System.out.println("Press 'x' to end game or 'N' to play again");
+        System.out.println("Press 'X' to end game or 'N' to play again");
         Scanner scanner = new Scanner(System.in);
         char exit = ' ';
         exit = scanner.nextLine().toUpperCase().charAt(0);

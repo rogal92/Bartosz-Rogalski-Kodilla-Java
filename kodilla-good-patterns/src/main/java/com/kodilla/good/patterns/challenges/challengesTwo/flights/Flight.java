@@ -5,23 +5,19 @@ import java.util.List;
 
 public class Flight {
 
-    private List<String> departureAirport = new ArrayList<>();
-    private List<String> arrivalAirport = new ArrayList<>();
+    private final String departureAirport;
+    private final String arrivalAirport;
 
-    public Flight(List<String> departureAirport, List<String> arrivalAirport) {
+    public Flight(String departureAirport, String arrivalAirport) {
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
     }
 
-    public Flight() {
-    }
-
-    public List<String> getDepartureAirport() {
+    public String getDepartureAirport() {
         return departureAirport;
     }
 
-    public List<String> getArrivalAirport() {
+    public String getArrivalAirport() {
         return arrivalAirport;
     }
 }
-

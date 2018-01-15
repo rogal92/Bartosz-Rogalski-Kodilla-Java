@@ -30,30 +30,23 @@ public class Game implements RpsItems {
     }
 
     public void play() {
-//        stats.getPlayerChoices() = player.getChoice();
-//        stats.getComputerChoices() = computer.getChoice();
 
-        stats.getResults();
-        stats.displayResults();
-        stats.statistics();
-        stats.endingStats();
+        stats.updateStatistic(player.getChoice(), computer.getChoice());
+//        if (results.equals(RESULTS.WIN) && playerScore <= 3) {
+//            playerScore++;
+//            System.out.println("Player score is: " + playerScore);
+//            if (playerScore == 3) {
+//                System.out.println("Player scored: " + playerScore + "Game over");
+//                game.playAgain();
+//            }
+//        } else if (results.equals(RESULTS.LOOSE) && computerScore <= 3) {
+//            computerScore++;
+//            System.out.println("Computer score is: " + computerScore);
+//            if (computerScore == 3) {
+//                System.out.println("Computer scored: " + computerScore + " " + "Game over");
+//                game.playAgain();
+//            }
     }
 
-    public void playAgain() {
-        System.out.println("Press 'X' to end game or 'N' to play again");
-        Scanner scanner = new Scanner(System.in);
-        char exit = ' ';
-        exit = scanner.nextLine().toUpperCase().charAt(0);
 
-        if (exit == 'X') {
-            scanner.close();
-            System.exit(1);
-        }
-        if (exit == 'N') {
-            play();
-        } else {
-            System.out.println("Wrong input! Press 'X' to quit or 'N' to start again");
-            playAgain();
-        }
-    }
 }

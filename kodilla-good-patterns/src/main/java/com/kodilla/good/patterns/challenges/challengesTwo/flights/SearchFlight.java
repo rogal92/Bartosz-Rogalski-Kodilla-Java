@@ -3,26 +3,49 @@ package com.kodilla.good.patterns.challenges.challengesTwo.flights;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SearchFlight {
 
     private List<Flight> flights = new ArrayList<Flight>();
+    private String departureFrom;
+    private String departureTo;
+
+    public SearchFlight(List<Flight> flights, String departureFrom, String departureTo) {
+        this.flights = flights;
+        this.departureFrom = departureFrom;
+        this.departureTo = departureTo;
+    }
+
+    public List<Flight> getFlights() {
+        return flights;
+    }
+
+    public String getDepartureFrom() {
+        return departureFrom;
+    }
+
+    public String getDepartureTo() {
+        return departureTo;
+    }
 
     public SearchFlight() {
 
-        Flight waw_krk = new Flight("Warszawa","Kraków");
-        Flight waw_gda = new Flight("Warszawa","Gdańsk");
-        Flight waw_wro = new Flight("Warszawa","Wrocław");
+        Flight waw_krk = new Flight("Warszawa", "Kraków");
+        Flight waw_gda = new Flight("Warszawa", "Gdańsk");
+        Flight waw_wro = new Flight("Warszawa", "Wrocław");
 
-        Flight gda_wro = new Flight("Gdańsk","Wrocław");
-        Flight gda_waw = new Flight("Gdańsk","Warszawa");
+        Flight gda_wro = new Flight("Gdańsk", "Wrocław");
+        Flight gda_waw = new Flight("Gdańsk", "Warszawa");
 
         Flight krk_wro = new Flight("Kraków", "Wrocław");
-        Flight krk_waw = new Flight("Kraków","Warszawa");
+        Flight krk_waw = new Flight("Kraków", "Warszawa");
 
-        Flight wro_krk = new Flight("Wrocław","Kraków");
-        Flight wro_waw = new Flight("Wrocław","Warszawa");
-        Flight wro_gda = new Flight("Wrocław","Gdańsk");
+        Flight wro_krk = new Flight("Wrocław", "Kraków");
+        Flight wro_waw = new Flight("Wrocław", "Warszawa");
+        Flight wro_gda = new Flight("Wrocław", "Gdańsk");
 
         flights.add(waw_gda);
         flights.add(waw_krk);
@@ -38,33 +61,21 @@ public class SearchFlight {
         flights.add(gda_waw);
         flights.add(gda_wro);
     }
-    public void searchFlightsFrom() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Search for flight from: ");
-        String departureFrom = scanner.nextLine();
 
-        if (departureFrom.equals("Warszawa") || departureFrom.equals("Kraków") || departureFrom.equals("Gdańsk") || departureFrom.equals("Wrocław")) {
-            flights.stream()
-                    .filter(f -> f.getDepartureAirport().contains(departureFrom))
-                    .forEach(System.out::println);
-        } else {
-            System.out.println("wrong input");
-            searchFlightsFrom();
-        }
+    public List<Flight> searchFlightsFrom(String departureFrom) {
+
+       List<Flight> from =  flights.stream()
+                .filter(f -> f.getDepartureAirport().startsWith(departureFrom))
+                .collect(Collectors.toList());
+        return from;
     }
 
-    public void searchFlightsTo() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Search for flight to: ");
-        String arrivalTo = scanner.nextLine();
 
-        if (arrivalTo.equals("Warszawa") || arrivalTo.equals("Kraków") || arrivalTo.equals("Gdańsk") || arrivalTo.equals("Wrocław")) {
-            flights.stream()
-                    .filter(f -> f.getArrivalAirport().contains(arrivalTo))
-                    .forEach(System.out::println);
-        } else {
-            System.out.println("wrong input");
-            searchFlightsTo();
+    public List<Flight> searchFlightsTo(String departureTo) {
+
+        List<Flight> to = flights.stream()
+                    .filter(f -> f.getArrivalAirport().startsWith(departureTo))
+                    .collect(Collectors.toList());
+            return to;
         }
     }
-}

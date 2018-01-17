@@ -2,34 +2,11 @@ package com.kodilla.good.patterns.challenges.challengesTwo.flights;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SearchFlight {
 
     private List<Flight> flights = new ArrayList<Flight>();
-    private String departureFrom;
-    private String departureTo;
-
-    public SearchFlight(List<Flight> flights, String departureFrom, String departureTo) {
-        this.flights = flights;
-        this.departureFrom = departureFrom;
-        this.departureTo = departureTo;
-    }
-
-    public List<Flight> getFlights() {
-        return flights;
-    }
-
-    public String getDepartureFrom() {
-        return departureFrom;
-    }
-
-    public String getDepartureTo() {
-        return departureTo;
-    }
 
     public SearchFlight() {
 
@@ -64,12 +41,11 @@ public class SearchFlight {
 
     public List<Flight> searchFlightsFrom(String departureFrom) {
 
-       List<Flight> from =  flights.stream()
+       List<Flight> from = flights.stream()
                 .filter(f -> f.getDepartureAirport().startsWith(departureFrom))
                 .collect(Collectors.toList());
         return from;
     }
-
 
     public List<Flight> searchFlightsTo(String departureTo) {
 

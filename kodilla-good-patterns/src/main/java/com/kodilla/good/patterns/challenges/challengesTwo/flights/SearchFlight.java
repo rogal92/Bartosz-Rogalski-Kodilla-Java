@@ -41,7 +41,7 @@ public class SearchFlight {
 
     public List<Flight> searchFlightsFrom(String departureFrom) {
 
-       List<Flight> from = flights.stream()
+        List<Flight> from = flights.stream()
                 .filter(f -> f.getDepartureAirport().startsWith(departureFrom))
                 .collect(Collectors.toList());
         return from;
@@ -50,8 +50,27 @@ public class SearchFlight {
     public List<Flight> searchFlightsTo(String departureTo) {
 
         List<Flight> to = flights.stream()
-                    .filter(f -> f.getArrivalAirport().startsWith(departureTo))
+                .filter(f -> f.getArrivalAirport().startsWith(departureTo))
+                .collect(Collectors.toList());
+        return to;
+    }
+
+    public List<Flight> searchNotDirectFlights(String to, String from) {
+
+        List<Flight> flightsTo = flights.stream()
+                .filter(f -> f.getArrivalAirport().startsWith(to))
+                .collect(Collectors.toList());
+
+        if (!(flightsTo.contains(from))) {
+
+            List<Flight> through = flights.stream()
+                    .filter(f -> f.getDepartureAirport().startsWith(from))
+                    .filter(flight -> flight.getArrivalAirport().equals(flightsTo.contains(flight.getDepartureAirport())))
                     .collect(Collectors.toList());
-            return to;
+
+            return through;
+        } else {
+            return flightsTo;
         }
     }
+}

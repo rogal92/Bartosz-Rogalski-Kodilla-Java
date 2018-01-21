@@ -26,4 +26,15 @@ public class FligthsTestSuite {
         //Then
         Assert.assertEquals(2,searchFlight.searchFlightsTo("Gdańsk").size());
     }
+
+    @Test
+    public void testFlightsThrough() {
+        //Given
+        SearchFlight searchFlight = new SearchFlight();
+
+        //When
+
+        //Then
+        Assert.assertEquals(1,searchFlight.searchNotDirectFlights("Kraków","Gdańsk").size());
+    }
 }

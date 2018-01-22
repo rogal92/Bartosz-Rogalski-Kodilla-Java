@@ -59,17 +59,17 @@ public class SearchFlight {
     public List<Flight> searchNotDirectFlights(String to, String from, String by) {
 
         List<Flight> flightsBy = flights.stream()
-                .filter(f -> f.getDepartureAirport().startsWith(from))
-                .filter(f -> f.getArrivalAirport().startsWith(by))
+                .filter(fligthsFrom -> fligthsFrom.getDepartureAirport().startsWith(from))
+                .filter(fligthsBy -> fligthsBy.getArrivalAirport().startsWith(by))
                 .collect(Collectors.toList());
 
         List<Flight> flightsTo = flights.stream()
-                .filter(j -> j.getDepartureAirport().startsWith(by))
-                .filter(f -> f.getArrivalAirport().startsWith(to))
+                .filter(flightsByTwo -> flightsByTwo.getDepartureAirport().startsWith(by))
+                .filter(flightsToTwo -> flightsToTwo.getArrivalAirport().startsWith(to))
                 .collect(Collectors.toList());
 
         List<Flight> notDirectFlights = new ArrayList<>();
-        Stream.of(flightsBy,flightsTo).forEach(notDirectFlights::addAll);
-        return notDirectFlights;
+        flightsBy.addAll(flightsTo);
+        return flightsBy;
     }
 }

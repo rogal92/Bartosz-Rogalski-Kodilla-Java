@@ -35,6 +35,6 @@ public class FligthsTestSuite {
         //When
 
         //Then
-        Assert.assertEquals(1,searchFlight.searchNotDirectFlights("Kraków","Gdańsk").size());
+        Assert.assertEquals(2,searchFlight.searchNotDirectFlights("Kraków","Gdańsk","Warszawa").size());
     }
 }

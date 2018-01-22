@@ -3,6 +3,7 @@ package com.kodilla.good.patterns.challenges.challengesTwo.flights;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SearchFlight {
 
@@ -55,22 +56,20 @@ public class SearchFlight {
         return to;
     }
 
-    public List<Flight> searchNotDirectFlights(String to, String from) {
+    public List<Flight> searchNotDirectFlights(String to, String from, String by) {
+
+        List<Flight> flightsBy = flights.stream()
+                .filter(f -> f.getDepartureAirport().startsWith(from))
+                .filter(f -> f.getArrivalAirport().startsWith(by))
+                .collect(Collectors.toList());
 
         List<Flight> flightsTo = flights.stream()
+                .filter(j -> j.getDepartureAirport().startsWith(by))
                 .filter(f -> f.getArrivalAirport().startsWith(to))
                 .collect(Collectors.toList());
 
-        if (!(flightsTo.contains(from))) {
-
-            List<Flight> through = flights.stream()
-                    .filter(f -> f.getDepartureAirport().startsWith(from))
-                    .filter(flight -> flight.getArrivalAirport().equals(flightsTo.contains(flight.getDepartureAirport())))
-                    .collect(Collectors.toList());
-
-            return through;
-        } else {
-            return flightsTo;
-        }
+        List<Flight> notDirectFlights = new ArrayList<>();
+        Stream.of(flightsBy,flightsTo).forEach(notDirectFlights::addAll);
+        return notDirectFlights;
     }
 }

@@ -18,15 +18,8 @@ public class  OrderFacade {
     private ShopService shopService;
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
 
-
-    @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))" +
-    "&& args(userId) && target(order)")
-
     public void processOrder(final OrderDto order, final Long userId)
         throws OrderProcessingException {
-
-        LOGGER.info("Order: " + order.getItems().iterator() + ", Args: " + userId);
-
         boolean wasError = false;
         long orderId = shopService.openOrder(userId);
         LOGGER.info("Registering new order, ID: " + orderId);

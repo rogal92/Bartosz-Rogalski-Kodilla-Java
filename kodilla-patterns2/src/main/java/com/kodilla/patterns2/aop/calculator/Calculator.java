@@ -19,7 +19,7 @@ public class Calculator {
     }
     public double div(double x, double y) {
         if(y == 0){
-            throw new ArithmeticException("ivide by zero!");
+            throw new ArithmeticException("Divide by zero!");
         }
         return x / y;
     }

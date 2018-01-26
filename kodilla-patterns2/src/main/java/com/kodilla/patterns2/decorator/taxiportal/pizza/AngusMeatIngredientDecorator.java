@@ -14,6 +14,6 @@ public class AngusMeatIngredientDecorator extends AbstractPizzaOrderDecorator {
 
     @Override
     public String getDescription() {
-        return super.getDescritpion() + "angus meat";
+        return super.getDescription() + " + angus meat";
     }
 }

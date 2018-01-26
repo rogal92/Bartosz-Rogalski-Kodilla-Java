@@ -15,7 +15,7 @@ public class AbstractPizzaOrderDecorator implements PizzaOrder {
     }
 
     @Override
-    public String getDescritpion() {
-        return pizzaOrder.getDescritpion();
+    public String getDescription() {
+        return pizzaOrder.getDescription();
     }
 }

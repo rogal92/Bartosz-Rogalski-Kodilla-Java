@@ -9,7 +9,7 @@ public class BasicPizzaOrder implements PizzaOrder {
     }
 
     @Override
-    public String getDescritpion() {
+    public String getDescription() {
         return "Basic with tomato sauce and cheese";
     }
 }

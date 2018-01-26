@@ -9,7 +9,7 @@ public class BasicTaxiOrder implements TaxiOrder {
     }
 
     @Override
-    public String getDescritpion() {
+    public String getDescription() {
         return "Drive a course";
     }
 }

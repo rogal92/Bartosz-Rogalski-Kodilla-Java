@@ -13,7 +13,7 @@ public class TaxiNetworkOrderDecorator extends AbstractTaxiOrderDecorator {
     }
 
     @Override
-    public String getDescritpion() {
-        return super.getDescription() + "by Taxi Network";
+    public String getDescription() {
+        return super.getDescription() + " by Taxi Network";
     }
 }

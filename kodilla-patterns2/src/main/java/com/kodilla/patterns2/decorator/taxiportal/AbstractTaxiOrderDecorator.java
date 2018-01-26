@@ -16,7 +16,7 @@ public abstract class AbstractTaxiOrderDecorator implements TaxiOrder {
 
     @Override
     public String getDescription() {
-        return taxiOrder.getDescritpion();
+        return taxiOrder.getDescription();
     }
 }
 

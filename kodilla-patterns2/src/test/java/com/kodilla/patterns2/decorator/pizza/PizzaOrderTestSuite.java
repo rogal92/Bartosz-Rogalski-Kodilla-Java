@@ -17,7 +17,7 @@ public class PizzaOrderTestSuite {
         BigDecimal calculatedCost = theOrder.getCost();
 
         //Then
-        assertEquals(15,calculatedCost);
+        assertEquals(new BigDecimal(15),calculatedCost);
     }
     @Test
     public void testBasicPizzaOrderGetDescription() {
@@ -25,7 +25,7 @@ public class PizzaOrderTestSuite {
         PizzaOrder theOrder = new BasicPizzaOrder();
 
         //When
-        String description = theOrder.getDescritpion();
+        String description = theOrder.getDescription();
 
         //Then
         assertEquals("Basic with tomato sauce and cheese",description);
@@ -40,7 +40,7 @@ public class PizzaOrderTestSuite {
         BigDecimal calculatedCost = theOrder.getCost();
 
         //Then
-        assertEquals(23,calculatedCost);
+        assertEquals(new BigDecimal(23),calculatedCost);
     }
     @Test
     public void testBasicWithSeafoodGetDescription() {
@@ -49,7 +49,7 @@ public class PizzaOrderTestSuite {
         theOrder = new SeafoodIngredientDecorator(theOrder);
 
         //When
-        String description = theOrder.getDescritpion();
+        String description = theOrder.getDescription();
 
         //Then
         assertEquals("Basic with tomato sauce and cheese + seafood",description);
@@ -63,7 +63,7 @@ public class PizzaOrderTestSuite {
         BigDecimal calculatedCost = theOrder.getCost();
 
         //Then
-        assertEquals(17,calculatedCost);
+        assertEquals(new BigDecimal(17),calculatedCost);
     }
     @Test
     public void testBasicWithExtraCheeseGetDescription() {
@@ -72,7 +72,7 @@ public class PizzaOrderTestSuite {
         theOrder = new ExtraCheeseDecorator(theOrder);
 
         //When
-        String description = theOrder.getDescritpion();
+        String description = theOrder.getDescription();
 
         //Then
         assertEquals("Basic with tomato sauce and cheese + extra cheese",description);
@@ -87,7 +87,7 @@ public class PizzaOrderTestSuite {
         BigDecimal calculatedCost = theOrder.getCost();
 
         //Then
-        assertEquals(23,calculatedCost);
+        assertEquals(new BigDecimal(23),calculatedCost);
     }
     @Test
     public void testBasicWithAngusMeatDescription() {
@@ -96,7 +96,7 @@ public class PizzaOrderTestSuite {
         theOrder = new AngusMeatIngredientDecorator(theOrder);
 
         //When
-        String description = theOrder.getDescritpion();
+        String description = theOrder.getDescription();
 
         //Then
         assertEquals("Basic with tomato sauce and cheese + angus meat",description);
@@ -112,7 +112,7 @@ public class PizzaOrderTestSuite {
         BigDecimal calculatedCost = theOrder.getCost();
 
         //Then
-        assertEquals(25,calculatedCost);
+        assertEquals(new BigDecimal(25),calculatedCost);
     }
     @Test
     public void testBasicWithAngusMeatAndCheeseDescription() {
@@ -122,7 +122,7 @@ public class PizzaOrderTestSuite {
         theOrder = new AngusMeatIngredientDecorator(theOrder);
 
         //When
-        String description = theOrder.getDescritpion();
+        String description = theOrder.getDescription();
 
         //Then
         assertEquals("Basic with tomato sauce and cheese + extra cheese + angus meat",description);

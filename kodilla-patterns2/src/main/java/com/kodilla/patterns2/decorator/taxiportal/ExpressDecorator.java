@@ -13,7 +13,7 @@ public class ExpressDecorator extends AbstractTaxiOrderDecorator {
     }
 
     @Override
-    public String getDescritpion() {
+    public String getDescription() {
         return super.getDescription() + " express ervice";
     }
 }

@@ -14,6 +14,6 @@ public class SeafoodIngredientDecorator extends AbstractPizzaOrderDecorator {
 
     @Override
     public String getDescription() {
-        return super.getDescritpion() + "+ seafood";
+        return super.getDescription() + " + seafood";
     }
 }

@@ -12,7 +12,7 @@ public class VipDecorator extends AbstractTaxiOrderDecorator {
         return super.getCost().add(new BigDecimal(10));
     }
     @Override
-    public String getDescritpion() {
+    public String getDescription() {
         return super.getDescription() + " variant VIP";
     }
 }

@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 @Aspect
 @Component
-public class Watcher {
+public class OrderLoggingAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(com.kodilla.patterns2.aop.calculator.Watcher.class);
 
     @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))" +

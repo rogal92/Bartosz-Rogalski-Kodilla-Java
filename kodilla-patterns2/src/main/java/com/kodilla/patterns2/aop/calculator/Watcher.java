@@ -15,9 +15,6 @@ import java.math.BigDecimal;
 public class Watcher {
     private static final Logger LOGGER = LoggerFactory.getLogger(Watcher.class);
 
-    @Before("execution(* com.kodilla.patterns2.aop.calculator.Calculator.factorial(..))" +
-    "&& args(theNumber) && target(object)")
-
     @Around("execution(* com.kodilla.patterns2.aop.calculator.Calculator.factorial(..))")
     public Object measureTime(final ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         Object result;

@@ -98,6 +98,6 @@ public class CompanyDaoTestSuite {
         //Assert.assertEquals(1,companies.size());
         Assert.assertEquals("Adidas",companies.get(0).getName());
         //CleanUp
-        //companyDao.delete(companyOne.getId());
+        companyDao.delete(companyOne.getId());
     }
 }

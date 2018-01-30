@@ -1,15 +1,22 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+import org.hibernate.annotations.NamedQuery;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompaniesWithPassedSignes",
         query = "SELECT COMPANY_NAME FROM COMPANIES " +
                 "WHERE SUBSTRING(COMPANY_NAME FROM 1 FOR 3) = :NAME ",
         resultClass = Company.class
+)
+@NamedQuery(
+        name = "Company.retrieveCompaniesNames",
+        query = "FROM Company WHERE name LIKE :NAME"
 )
 @Entity
 @Table(name = "COMPANIES")

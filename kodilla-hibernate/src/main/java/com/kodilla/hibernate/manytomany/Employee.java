@@ -1,14 +1,22 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.springframework.stereotype.Component;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
-@NamedQuery(
-        name = "Employee.retrieveEmployeeWithPassedSurname",
-        query = "FROM Employee WHERE lastname = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.retrieveEmployeeWithPassedSurname",
+                query = "FROM Employee WHERE lastname = :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesNames",
+                query = "FROM Employee WHERE concat(lastname,'',firstname) LIKE :NAME"
+        )
+})
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {

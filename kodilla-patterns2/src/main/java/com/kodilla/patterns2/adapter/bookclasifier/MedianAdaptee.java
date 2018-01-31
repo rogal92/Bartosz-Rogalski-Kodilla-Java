@@ -11,12 +11,12 @@ public class MedianAdaptee implements BookStatistics {
     @Override
     public int averagePublicationYear(Map<BookSignature, Book> books) {
         Statistics stats = new Statistics();
-        return stats = averagePublicationYear()
+        return stats.averagePublicationYear(books);
     }
 
     @Override
     public int medianPublicationYear(Map<BookSignature, Book> books) {
         Statistics stats = new Statistics();
-        return stats = medianPublicationYear();
+        return stats.medianPublicationYear(books);
     }
 }

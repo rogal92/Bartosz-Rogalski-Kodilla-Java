@@ -11,11 +11,11 @@ import java.util.Set;
 
 public class MedianAdapter extends MedianAdaptee implements Classifier {
     @Override
-    public int publicationYearMedian(Set<Book> bookSet) {
+    public int publicationYearMedian(Set<Book> booksSet, BookSignature signature) {
 
         Map<BookSignature, Book> map = new HashMap<>();
         for (int i = 0; i < bookSet.size() ; i++) {
-            map
+            map.put(signature,);
         }
     }
 }

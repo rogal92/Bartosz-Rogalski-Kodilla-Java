@@ -13,9 +13,6 @@ public class Book {
         this.signature = signature;
     }
 
-    public Book() {
-    }
-
     public String getAuthor() {
         return author;
     }

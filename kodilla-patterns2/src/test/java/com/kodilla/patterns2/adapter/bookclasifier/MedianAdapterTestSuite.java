@@ -14,32 +14,14 @@ public class MedianAdapterTestSuite {
     @Test
     public void testPublicationYearMedianTest() {
         //Given
-        Book book = new Book();
+        Set<Book> bookSet = new HashSet<>();
         MedianAdapter medianAdapter = new MedianAdapter();
 
         //When
-        int publicationYearMedian = medianAdapter.publicationYearMedian(book.getSignature())
+        int publicationYearMedian = medianAdapter.publicationYearMedian(bookSet);
 
         //Then
         System.out.println(publicationYearMedian);
         assertEquals(publicationYearMedian,1992,0);
     }
 }
-
-
-
-//public class SalaryAdapterTestSuite {
-//    @Test
-//    public void testTotalSalary() {
-//        //Given
-//        Workers workers = new Workers();
-//        SalaryAdapter salaryAdapter = new SalaryAdapter();
-//
-//        //When
-//        double totalSalary = salaryAdapter.TotalSalary(workers.getWorkers(), workers.getSalaries());
-//
-//        //Then
-//        System.out.println(totalSalary);
-//        assertEquals(totalSalary, 27750, 0);
-//    }
-//}

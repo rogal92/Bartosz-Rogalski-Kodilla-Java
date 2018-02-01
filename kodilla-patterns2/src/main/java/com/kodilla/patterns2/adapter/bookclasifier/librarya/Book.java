@@ -12,6 +12,10 @@ public class Book {
         this.publicationYear = publicationYear;
         this.signature = signature;
     }
+
+    public Book() {
+    }
+
     public String getAuthor() {
         return author;
     }

@@ -15,6 +15,10 @@ public class MedianAdapterTestSuite {
     public void testPublicationYearMedianTest() {
         //Given
         Set<Book> bookSet = new HashSet<>();
+        bookSet.add(new Book("authorOne","titleOne",1992,"sOne"));
+        bookSet.add(new Book("authorTwo","titleTwo",2000,"sTwo"));
+        bookSet.add(new Book("authorThree","titleThree",2005,"sThree"));
+
         MedianAdapter medianAdapter = new MedianAdapter();
 
         //When
@@ -22,6 +26,6 @@ public class MedianAdapterTestSuite {
 
         //Then
         System.out.println(publicationYearMedian);
-        assertEquals(publicationYearMedian,0.0,0);
+        assertEquals(publicationYearMedian,2000.0,0);
     }
 }

@@ -32,11 +32,11 @@ public class ShopServiceTestSuite {
     @Test
     public void testFindEmployeesBySequence() {
         //Given
-        Employee employee = new Employee("Marcin", "Kun");
+        Employee employee = new Employee("Marcin", "Nowak");
         employeeDao.save(employee);
 
         //When
-        List<Employee> result = searchFacade.searchEmployeesNames("un");
+        List<Employee> result = searchFacade.searchEmployeesNames("owa");
         //Then
         Assert.assertEquals(1, result.size());
         //CleanUp

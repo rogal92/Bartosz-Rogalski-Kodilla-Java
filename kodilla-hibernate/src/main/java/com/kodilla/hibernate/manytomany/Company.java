@@ -10,7 +10,7 @@ import org.hibernate.annotations.NamedQuery;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompaniesWithPassedSignes",
-        query = "SELECT COMPANY_NAME FROM COMPANIES " +
+        query = "SELECT * FROM COMPANIES " +
                 "WHERE SUBSTRING(COMPANY_NAME FROM 1 FOR 3) = :NAME ",
         resultClass = Company.class
 )

@@ -89,7 +89,6 @@ public class CompanyDaoTestSuite {
         //Given
         Company companyOne = new Company("Adidas");
         companyDao.save(companyOne);
-//     String firstThreeLetters = companyOne.getName().substring(1,3);
         String firstThreeLetters = "Adi";
         //When
         List<Company> companies = companyDao.retrieveCompaniesWithPassedSignes(firstThreeLetters);

@@ -1,6 +1,7 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
-import java.time.LocalDateTime;
+import com.kodilla.good.patterns.challenges.challengesTwo.door2Door.suppliers.SupplierImpl;
+
 import java.util.HashMap;
 
 public class ProductOrderServiceTwo {
@@ -18,9 +19,9 @@ public class ProductOrderServiceTwo {
     public OrderDtoTwo process(final OrderApproach orderApproach) {
         boolean isOrdered = orderServiceTwo.order(orderApproach);
         HashMap<String, SupplierImpl> suppliers = new HashMap<>();
-        suppliers.put("SupplierOne", new SupplierImpl("Extra food shop","Czerwienne", 445665432,1));
-        suppliers.put("SupplierTwo", new SupplierImpl("Healthy shop", "Ząb",342345342, 2));
-        suppliers.put("SupplierThree", new SupplierImpl("Gluten free shop", "Kościelisko", 23452345,3));
+        suppliers.put("SupplierOne", new SupplierImpl());
+        suppliers.put("SupplierTwo", new SupplierImpl());
+        suppliers.put("SupplierThree", new SupplierImpl());
 
         if(isOrdered) {
             informationServiceTwo.inform(orderApproach.getUser());

@@ -8,5 +8,6 @@ public class Application {
 
         ProductOrderServiceTwo productOrderServiceTwo = new ProductOrderServiceTwo(new InformationServiceTwoImpl(),new OrderServiceTwoImpl(),new OrderRepositoryTwoImpl());
         productOrderServiceTwo.process(orderApproach);
+        orderApproachRetriever.retrieve();
     }
 }

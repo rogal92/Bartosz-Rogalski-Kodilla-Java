@@ -9,13 +9,14 @@ public class OrderApproach {
     private List<Product> retriever;
     private LocalDateTime orderDate;
     private User user;
+    private Product product;
 
-    public OrderApproach(List<Product> retriever, LocalDateTime orderDate, User user) {
+    public OrderApproach(List<Product> retriever, LocalDateTime orderDate, User user, Product product) {
         this.retriever = retriever;
         this.orderDate = orderDate;
         this.user = user;
+        this.product = product;
     }
-
     public OrderApproach() {
     }
 
@@ -29,6 +30,10 @@ public class OrderApproach {
 
     public User getUser() {
         return user;
+    }
+
+    public Product getProduct() {
+        return product;
     }
 }
 

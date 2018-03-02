@@ -13,19 +13,16 @@ public class SupplierImpl implements Supplier {
         GlutenFreeShopSupplier glutenFreeShopSupplier = new GlutenFreeShopSupplier();
         HealthyShopSupplier healthyShopSupplier = new HealthyShopSupplier();
         ExtraFoodShopSupplier extraFoodShopSupplier = new ExtraFoodShopSupplier();
+        String id = orderApproach.getSupplierId();
 
-        String productName = orderApproach.getProduct().getProductName();
+        HashMap<String, Supplier> orderMap = new HashMap<>();
 
-        switch (productName) {
-            case "Extra Food Product":
-                extraFoodShopSupplier.process();
-                break;
-            case "Healthy Food Product":
-                healthyShopSupplier.process();
-                break;
-            case "Gluten Free Product":
-                glutenFreeShopSupplier.process();
-                break;
+        orderMap.put(id,glutenFreeShopSupplier);
+        orderMap.put(id,healthyShopSupplier);
+        orderMap.put(id,extraFoodShopSupplier);
+
+        if(orderMap.get(id).equals("Extra Food Shop")) {
+            extraFoodShopSupplier.process(orderApproach);
         }
     }
 }

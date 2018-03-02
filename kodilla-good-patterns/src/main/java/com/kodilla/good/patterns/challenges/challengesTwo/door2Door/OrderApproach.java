@@ -9,13 +9,13 @@ public class OrderApproach {
     private List<Product> retriever;
     private LocalDateTime orderDate;
     private User user;
-    private Product product;
+    private String supplierId;
 
-    public OrderApproach(List<Product> retriever, LocalDateTime orderDate, User user, Product product) {
+    public OrderApproach(List<Product> retriever, LocalDateTime orderDate, User user,String supplierId) {
         this.retriever = retriever;
         this.orderDate = orderDate;
         this.user = user;
-        this.product = product;
+        this.supplierId = supplierId;
     }
     public OrderApproach() {
     }
@@ -32,8 +32,8 @@ public class OrderApproach {
         return user;
     }
 
-    public Product getProduct() {
-        return product;
+    public String getSupplierId() {
+        return supplierId;
     }
 }
 

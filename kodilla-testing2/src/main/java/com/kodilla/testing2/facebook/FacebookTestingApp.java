@@ -27,6 +27,6 @@ public class FacebookTestingApp {
 
         WebElement selectComboThree = webDriver.findElement(By.xpath(XPATH_SELECTYEAR));
         Select selectBoardThree = new Select(selectComboThree);
-        selectBoardThree.selectByIndex(1992);
+        selectBoardThree.selectByIndex(27);
     }
 }

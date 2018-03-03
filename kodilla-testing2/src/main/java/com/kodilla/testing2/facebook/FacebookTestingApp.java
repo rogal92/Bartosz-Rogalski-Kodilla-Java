@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.Select;
 
 public class FacebookTestingApp {
 
-    public static final String XPATH_SELECTDAY = "//div[contains(@class, \"_5k_5/span/span/select[1]";
-    public static final String XPATH_SELECTMONTH = "//div[contains(@class, \"_5k_5/span/span/select/select[2]";
-    public static final String XPATH_SELECTYEAR = "//div[contains(@class, \"_5k_5/span/span/select/select/select[3]";
+    public static final String XPATH_SELECTDAY = "//div[contains(@class, \"_5k_5\")]/span/span/select[1]";
+    public static final String XPATH_SELECTMONTH = "//div[contains(@class, \"_5k_5\")]/span/span/select[2]";
+    public static final String XPATH_SELECTYEAR = "//div[contains(@class, \"_5k_5\")]/span/span/select[3]";
 
     public static void main(String[] args) {
 
@@ -19,14 +19,14 @@ public class FacebookTestingApp {
 
         WebElement selectCombo = webDriver.findElement(By.xpath(XPATH_SELECTDAY));
         Select selectBoard = new Select(selectCombo);
-        selectBoard.selectByIndex(1);
+        selectBoard.selectByIndex(31);
 
         WebElement selectComboTwo = webDriver.findElement(By.xpath(XPATH_SELECTMONTH));
         Select selectBoardTwo = new Select(selectComboTwo);
-        selectBoardTwo.selectByIndex(2);
+        selectBoardTwo.selectByIndex(10);
 
         WebElement selectComboThree = webDriver.findElement(By.xpath(XPATH_SELECTYEAR));
         Select selectBoardThree = new Select(selectComboThree);
-        selectBoardThree.selectByIndex(3);
+        selectBoardThree.selectByIndex(1992);
     }
 }

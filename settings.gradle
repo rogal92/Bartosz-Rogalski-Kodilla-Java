@@ -10,6 +10,5 @@ include 'kodilla-spring-web'
 include 'kodilla-exception'
 include 'kodilla-jdbc'
 include 'kodilla-sudoku'
-findProject(':kodilla-sudoku')?.name = 'sudoku'
 include 'kodilla-testing2'
 

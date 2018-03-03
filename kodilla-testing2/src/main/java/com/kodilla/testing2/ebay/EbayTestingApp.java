@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 
 public class EbayTestingApp {
 
-    public static final String NAME = "gh-la";
+    public static final String NAME = "gh-ac";
     public static void main(String [] args) {
 
         WebDriver webDriver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         webDriver.get("https://www.ebay.com");
 
-        WebElement searchField = webDriver.findElement(By.name(NAME));
+        WebElement searchField = webDriver.findElement(By.id(NAME));
         searchField.sendKeys("laptop");
         searchField.submit();
     }

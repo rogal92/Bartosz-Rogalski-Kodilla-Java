@@ -4,6 +4,7 @@ import com.kodilla.testing2.config.WebDriverConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class FacebookTestingApp {
 
@@ -21,11 +22,11 @@ public class FacebookTestingApp {
         selectBoard.selectByIndex(1);
 
         WebElement selectComboTwo = webDriver.findElement(By.xpath(XPATH_SELECTMONTH));
-        Select selectBoard = new Select(selectComboTwo);
-        selectBoard.selectByIndex(2);
+        Select selectBoardTwo = new Select(selectComboTwo);
+        selectBoardTwo.selectByIndex(2);
 
         WebElement selectComboThree = webDriver.findElement(By.xpath(XPATH_SELECTYEAR));
-        Select selectBoard = new Select(selectComboThree);
-        selectBoard.selectByIndex(3);
+        Select selectBoardThree = new Select(selectComboThree);
+        selectBoardThree.selectByIndex(3);
     }
 }

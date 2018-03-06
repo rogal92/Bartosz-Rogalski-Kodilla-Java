@@ -10,19 +10,16 @@ public class SupplierImpl implements Supplier {
     @Override
     public void process(OrderApproach orderApproach) {
 
-        GlutenFreeShopSupplier glutenFreeShopSupplier = new GlutenFreeShopSupplier();
-        HealthyShopSupplier healthyShopSupplier = new HealthyShopSupplier();
-        ExtraFoodShopSupplier extraFoodShopSupplier = new ExtraFoodShopSupplier();
+        GlutenFreeShopSupplier glutenFreeShopSupplier = new GlutenFreeShopSupplier("Gluten Free Shop");
+        HealthyShopSupplier healthyShopSupplier = new HealthyShopSupplier("Healthy Shop");
+        ExtraFoodShopSupplier extraFoodShopSupplier = new ExtraFoodShopSupplier("Extra Food Shop");
         String id = orderApproach.getSupplierId();
-
         HashMap<String, Supplier> orderMap = new HashMap<>();
 
-        orderMap.put(id,glutenFreeShopSupplier);
-        orderMap.put(id,healthyShopSupplier);
-        orderMap.put(id,extraFoodShopSupplier);
+        orderMap.put(glutenFreeShopSupplier.getId(),glutenFreeShopSupplier);
+        orderMap.put(healthyShopSupplier.getId(),healthyShopSupplier);
+        orderMap.put(extraFoodShopSupplier.getId(),extraFoodShopSupplier);
 
-        if(orderMap.get(id).equals("Extra Food Shop")) {
-            extraFoodShopSupplier.process(orderApproach);
-        }
+        orderMap.get(id).process(orderApproach);
     }
 }

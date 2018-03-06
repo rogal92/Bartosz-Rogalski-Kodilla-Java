@@ -1,6 +1,7 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
 public class OrderDtoTwo {
+
     public User user;
     public boolean isOrdered;
 

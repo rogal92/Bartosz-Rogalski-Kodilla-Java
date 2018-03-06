@@ -18,10 +18,6 @@ public class ProductOrderServiceTwo {
 
     public OrderDtoTwo process(final OrderApproach orderApproach) {
         boolean isOrdered = orderServiceTwo.order(orderApproach);
-        HashMap<String, SupplierImpl> suppliers = new HashMap<>();
-        suppliers.put("SupplierOne", new SupplierImpl());
-        suppliers.put("SupplierTwo", new SupplierImpl());
-        suppliers.put("SupplierThree", new SupplierImpl());
 
         if(isOrdered) {
             informationServiceTwo.inform(orderApproach.getUser());

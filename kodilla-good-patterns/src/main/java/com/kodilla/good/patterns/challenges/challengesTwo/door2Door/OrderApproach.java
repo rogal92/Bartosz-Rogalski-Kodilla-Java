@@ -17,6 +17,7 @@ public class OrderApproach {
         this.user = user;
         this.supplierId = supplierId;
     }
+
     public OrderApproach() {
     }
 

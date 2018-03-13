@@ -12,6 +12,7 @@ public class GlutenFreeShopSupplier implements Supplier {
         this.id = id;
     }
 
+    @Override
     public String getId() {
         return id;
     }

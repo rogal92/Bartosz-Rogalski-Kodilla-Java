@@ -1,8 +1,5 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
-import com.kodilla.good.patterns.challenges.challengesTwo.door2Door.suppliers.SupplierImpl;
-
-import java.util.HashMap;
 
 public class ProductOrderServiceTwo {
 
@@ -16,6 +13,7 @@ public class ProductOrderServiceTwo {
         this.orderRepositoryTwo = orderRepositoryTwo;
     }
 
+
     public OrderDtoTwo process(final OrderApproach orderApproach) {
         boolean isOrdered = orderServiceTwo.order(orderApproach);
 
@@ -28,4 +26,3 @@ public class ProductOrderServiceTwo {
         }
     }
 }
-

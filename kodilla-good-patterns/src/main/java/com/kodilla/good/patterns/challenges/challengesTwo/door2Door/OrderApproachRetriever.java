@@ -1,11 +1,7 @@
 package com.kodilla.good.patterns.challenges.challengesTwo.door2Door;
 
-        import com.kodilla.good.patterns.challenges.challengesTwo.door2Door.suppliers.ExtraFoodShopSupplier;
-        import com.kodilla.good.patterns.challenges.challengesTwo.door2Door.suppliers.SupplierImpl;
-
         import java.time.LocalDateTime;
         import java.util.ArrayList;
-        import java.util.HashMap;
         import java.util.List;
 
 public class OrderApproachRetriever {

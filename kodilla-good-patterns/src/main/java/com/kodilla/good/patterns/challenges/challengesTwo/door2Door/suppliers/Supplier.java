@@ -4,4 +4,5 @@ import com.kodilla.good.patterns.challenges.challengesTwo.door2Door.OrderApproac
 
 public interface Supplier {
     void process(OrderApproach orderApproach);
+    String getId();
 }

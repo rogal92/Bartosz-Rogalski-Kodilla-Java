@@ -36,5 +36,9 @@ public class OrderApproach {
     public String getSupplierId() {
         return supplierId;
     }
+
+    public void setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
+    }
 }
 

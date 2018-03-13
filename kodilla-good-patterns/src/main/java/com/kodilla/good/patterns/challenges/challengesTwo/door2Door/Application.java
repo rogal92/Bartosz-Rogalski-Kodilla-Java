@@ -16,14 +16,15 @@ public class Application {
         GlutenFreeShopSupplier glutenFreeShopSupplier = new GlutenFreeShopSupplier("Gluten Free Shop");
         HealthyShopSupplier healthyShopSupplier = new HealthyShopSupplier("Healthy Shop Supplier");
 
-        OrderApproachRetriever orderApproachRetriever = new OrderApproachRetriever();
-        OrderApproach orderApproach = orderApproachRetriever.retrieve();
-
-        ProductOrderServiceTwo productOrderServiceTwo = new ProductOrderServiceTwo(new InformationServiceTwoImpl(),new OrderServiceTwoImpl(suppliers),new OrderRepositoryTwoImpl());
-        productOrderServiceTwo.process(orderApproach);
-
         suppliers.add(extraFoodShopSupplier);
         suppliers.add(glutenFreeShopSupplier);
         suppliers.add(healthyShopSupplier);
+
+        OrderApproachRetriever orderApproachRetriever = new OrderApproachRetriever();
+        OrderApproach orderApproach = orderApproachRetriever.retrieve();
+        orderApproach.setSupplierId("Extra Food");
+
+        ProductOrderServiceTwo productOrderServiceTwo = new ProductOrderServiceTwo(new InformationServiceTwoImpl(),new OrderServiceTwoImpl(suppliers),new OrderRepositoryTwoImpl());
+        productOrderServiceTwo.process(orderApproach);
     }
 }

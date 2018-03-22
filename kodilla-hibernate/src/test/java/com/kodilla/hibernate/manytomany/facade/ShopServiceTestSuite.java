@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -36,7 +33,7 @@ public class ShopServiceTestSuite {
         employeeDao.save(employee);
 
         //When
-        List<Employee> result = searchFacade.searchEmployeesNames("owa");
+        List<Employee> result = searchFacade.searchEmployeesByNames("owa");
         //Then
         Assert.assertEquals(1, result.size());
         //CleanUp
@@ -50,7 +47,7 @@ public class ShopServiceTestSuite {
         companyDao.save(company);
 
         //When
-        List<Company> result = searchFacade.searchCompaniesNames("urt");
+        List<Company> result = searchFacade.searchCompaniesByNames("urt");
 
         //Then
         Assert.assertEquals(1, result.size());

@@ -18,5 +18,5 @@ public interface CompanyDao extends CrudRepository<Company, Integer> {
     List<Company> retrieveCompaniesWithPassedSignes(@Param("NAME") String firstThreeLetters);
 
     @Query
-    List<Company>retrieveCompaniesNames(@Param("NAME") String name);
+    List<Company> retrieveCompaniesByNames(@Param("NAME") String name);
 }

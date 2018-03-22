@@ -19,14 +19,13 @@ public class SearchFacade {
         EmployeeDao employeeDao;
 
 
-        public List<Company> searchCompaniesNames(final String passedLetters) {
+        public List<Company> searchCompaniesByNames(final String passedLetters) {
 
-                return companyDao.retrieveCompaniesNames("%" + passedLetters + "%");
+                return companyDao.retrieveCompaniesByNames("%" + passedLetters + "%");
         }
 
-        public List<Employee> searchEmployeesNames(final String passedLetters) {
+        public List<Employee> searchEmployeesByNames(final String passedLetters) {
 
-                return employeeDao.retrieveEmployeesNames( "%" + passedLetters + "%");
-
+                return employeeDao.retrieveEmployeesByNames( "%" + passedLetters + "%");
         }
 }

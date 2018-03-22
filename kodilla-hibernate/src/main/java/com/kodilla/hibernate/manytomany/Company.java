@@ -15,7 +15,7 @@ import org.hibernate.annotations.NamedQuery;
         resultClass = Company.class
 )
 @NamedQuery(
-        name = "Company.retrieveCompaniesNames",
+        name = "Company.retrieveCompaniesByNames",
         query = "FROM Company WHERE name LIKE :NAME"
 )
 @Entity

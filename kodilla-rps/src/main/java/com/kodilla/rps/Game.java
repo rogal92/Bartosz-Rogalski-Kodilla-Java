@@ -7,13 +7,12 @@ public class Game implements RpsItems {
     private Computer computer = new Computer();
     private Player player = new Player();
 
-    public Game(Computer computer, Player player) {
+    public Game(final Computer computer, final Player player) {
         this.computer = computer;
         this.player = player;
     }
 
-    public Game() {
-    }
+    public Game() {}
 
     Statistics stats = new Statistics();
 
@@ -32,21 +31,5 @@ public class Game implements RpsItems {
     public void play() {
 
         stats.updateStatistic(player.getChoice(), computer.getChoice());
-//        if (results.equals(RESULTS.WIN) && playerScore <= 3) {
-//            playerScore++;
-//            System.out.println("Player score is: " + playerScore);
-//            if (playerScore == 3) {
-//                System.out.println("Player scored: " + playerScore + "Game over");
-//                game.playAgain();
-//            }
-//        } else if (results.equals(RESULTS.LOOSE) && computerScore <= 3) {
-//            computerScore++;
-//            System.out.println("Computer score is: " + computerScore);
-//            if (computerScore == 3) {
-//                System.out.println("Computer scored: " + computerScore + " " + "Game over");
-//                game.playAgain();
-//            }
     }
-
-
 }

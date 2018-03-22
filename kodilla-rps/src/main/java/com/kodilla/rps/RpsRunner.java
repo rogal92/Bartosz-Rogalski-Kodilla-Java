@@ -3,7 +3,7 @@ package com.kodilla.rps;
 import java.util.Scanner;
 
 public class RpsRunner {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Game game = new Game();
         game.introduction();
 
@@ -14,8 +14,10 @@ public class RpsRunner {
                 game.play();
             }
             game.stats.displayStats();
-        } while (playAgain());
+        }
+        while (playAgain());
     }
+
     public static boolean playAgain() {
         System.out.println("Press 'X' to end game or 'N' to play again");
         Scanner scanner = new Scanner(System.in);
@@ -29,7 +31,7 @@ public class RpsRunner {
             return true;
         } else {
             System.out.println("Wrong input! Press 'X' to quit or 'N' to start again");
-           return playAgain();
+            return playAgain();
         }
     }
 }

@@ -23,9 +23,9 @@ public class Player implements RpsItems {
                 return CHOICES.PAPER;
             case '3':
                 return CHOICES.SCISSORS;
+            default:
+                System.out.println("Something's wrong");
+                return getChoice();
         }
-
-        System.out.println("Wrong input, please press '1', '2' or '3'");
-        return getChoice();
     }
 }

@@ -6,8 +6,7 @@ public class Statistics implements RpsItems {
     private int computerScore;
     private int gamesPlayed;
 
-    public Statistics() {
-    }
+    public Statistics() {}
 
     public int getPlayerScore() {
         return playerScore;
@@ -17,9 +16,11 @@ public class Statistics implements RpsItems {
         return computerScore;
     }
 
-    private RESULTS getResults(CHOICES playerChoice, CHOICES computerChoice) {
-        if (playerChoice == computerChoice)
+    private RESULTS getResults(final CHOICES playerChoice, final CHOICES computerChoice) {
+        if (playerChoice == computerChoice) {
             return RESULTS.TIE;
+        }
+
         switch (playerChoice) {
 
             case ROCK:
@@ -33,7 +34,7 @@ public class Statistics implements RpsItems {
         }
     }
 
-    private void displayResults(CHOICES playerChoice, CHOICES computerChoice, RESULTS results) {
+    private void displayResults(final CHOICES playerChoice, final CHOICES computerChoice, final RESULTS results) {
 
         if (results.equals(RESULTS.TIE)) {
             System.out.println(playerChoice + " " + "Is the same with" + " " + computerChoice);
@@ -47,7 +48,7 @@ public class Statistics implements RpsItems {
         }
     }
 
-    private void updateScores(RESULTS results) {
+    private void updateScores(final RESULTS results) {
         gamesPlayed++;
 
         if (results.equals(RESULTS.WIN)) {
@@ -60,11 +61,11 @@ public class Statistics implements RpsItems {
         }
     }
 
-    public void updateStatistic(CHOICES playerChoice, CHOICES computerChoice) {
+    public void updateStatistic(final CHOICES playerChoice, final CHOICES computerChoice) {
 
-       RESULTS result = getResults(playerChoice, computerChoice);
-       displayResults(playerChoice,computerChoice,result);
-       updateScores(result);
+        RESULTS result = getResults(playerChoice, computerChoice);
+        displayResults(playerChoice, computerChoice, result);
+        updateScores(result);
     }
 
     public void displayStats() {
@@ -72,6 +73,7 @@ public class Statistics implements RpsItems {
         System.out.println("Player have won: " + playerScore + " " + "times");
         System.out.println("Computer have won " + computerScore + " " + "times");
     }
+
     public void reset() {
         playerScore = 0;
         computerScore = 0;
